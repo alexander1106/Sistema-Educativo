@@ -1726,6 +1726,27 @@ aside .news-letter hr {
   	-webkit-transform: rotate(-45deg);
 }
 
+.btn-eva {
+		padding: 10px 20px;
+		font-size: 16px;
+		text-align: center;
+		background-color: #183c63;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		float:right;
+		margin-right: 10px;
+		font-weight: bold;
+		color: white !important ;
+
+}
+	.btn-eva:hover{
+		color:white;
+		background-color: #007BFF;
+
+		transform: scale(1.03);
+	}
+
 #course-page .reserve-course h2,
 .testimonial-page aside .submit-testimonials h2 {
 	/*font-size: 2rem;*/

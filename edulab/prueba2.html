@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta sobre Planificación de Deuda y Finanzas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .question {
+        margin-bottom: 10px;
+      }
+
+      .answers {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .answer {
+        margin-bottom: 5px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .btn-sig {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-left: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preguntas sobre Planificación de Deuda y Finanzas</h1>
+      <form id="quizForm">
+        <!-- Pregunta 1 -->
+        <div class="question">
+          <p><strong>1. ¿Qué es la deuda?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q1" value="a" /> a) Dinero que has
+              prestado a otros.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="b" /> b) Dinero que debes a
+              otras personas o instituciones.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="c" /> c) Ingresos que
+              recibes regularmente.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+          <p><strong>2. ¿Cuál es una forma común de deuda?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q2" value="a" /> a) Inversión en
+              acciones.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="b" /> b) Préstamo
+              personal.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="c" /> c) Cuenta de
+              ahorros.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+          <p><strong>3. ¿Qué es una tasa de interés?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q3" value="a" /> a) El costo del
+              préstamo expresado como un porcentaje del monto prestado.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="b" /> b) Un descuento que
+              recibes al comprar un producto.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="c" /> c) El valor total de
+              tu deuda.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+          <p><strong>4. ¿Cuál es una ventaja de consolidar deudas?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q4" value="a" /> a) Aumentar el total
+              de la deuda.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="b" /> b) Reducir el número
+              de pagos mensuales.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="c" /> c) Incrementar las
+              tasas de interés.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+          <p><strong>5. ¿Qué es una tarjeta de crédito?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q5" value="a" /> a) Un instrumento
+              financiero que permite gastar dinero que no tienes
+              actualmente.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="b" /> b) Una cuenta de
+              ahorro.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="c" /> c) Un tipo de
+              inversión en el mercado de valores.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+          <p><strong>6. ¿Qué es un plan de pago?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q6" value="a" /> a) Una estrategia para
+              ganar más dinero.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q6" value="b" /> b) Un cronograma de
+              pagos regulares para reducir una deuda.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q6" value="c" /> c) Un tipo de gasto
+              mensual.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+          <p><strong>7. ¿Qué significa refinanciar una deuda?</strong></p>
+          <div class="answers">
+            <label class="answer">
+              <input type="radio" name="q7" value="a" /> a) Pedir prestado más
+              dinero.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q7" value="b" /> b) Sustituir una deuda
+              existente con una nueva deuda bajo diferentes términos.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q7" value="c" /> c) Pagar la deuda con
+              una tarjeta de crédito.
+            </label>
+          </div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+          <p>
+            <strong
+              >8. ¿Cuál es una consecuencia de no pagar a tiempo una
+              deuda?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer">
+              <input type="radio" name="q8" value="a" /> a) Mejora de tu
+              historial crediticio.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q8" value="b" /> b) Cargos por pagos
+              atrasados e intereses adicionales.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q8" value="c" /> c) Reducción de la
+              deuda total.
+            </label>
+          </div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+          <p><strong>9. ¿Qué es un préstamo con garantía?</strong></p>
+          <div class="answers">
+            <label class="answer">
+              <input type="radio" name="q9" value="a" /> a) Un préstamo que no
+              requiere ningún tipo de colateral.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q9" value="b" /> b) Un préstamo que está
+              respaldado por un activo, como una casa o un coche.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q9" value="c" /> c) Un préstamo a corto
+              plazo sin intereses.
+            </label>
+          </div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+          <p><strong>10. ¿Qué es el crédito revolving?</strong></p>
+          <div class="answers">
+            <label class="answer">
+              <input type="radio" name="q10" value="a" /> a) Un tipo de préstamo
+              a largo plazo con pagos fijos.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q10" value="b" /> b) Una línea de
+              crédito que permite al prestatario tomar prestado, pagar y volver
+              a tomar prestado.
+            </label>
+            <label class="answer">
+              <input type="radio" name="q10" value="c" /> c) Un tipo de cuenta
+              de ahorro con intereses altos.
+            </label>
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="button" onclick="calculateScore()">
+          ENVIAR RESPUESTAS
+        </button>
+        <a href="prueba3.html" class="btn-sig"> SIGUIENTE EVALUACIÓN </a>
+      </form>
+      <!-- Espacio para mostrar el resultado -->
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateScore() {
+        document.querySelector(".btn-sig").style.display = "inline-block";
+
+        // Obtiene todas las respuestas seleccionadas
+        var answers = document.querySelectorAll('input[type="radio"]:checked');
+        var score = 0;
+
+        // Compara las respuestas seleccionadas con las respuestas correctas
+        for (var i = 0; i < answers.length; i++) {
+          if (answers[i].value === "b" && i === 0) {
+            score++;
+          } else if (answers[i].value === "b" && i === 1) {
+            score++;
+          } else if (answers[i].value === "a" && i === 2) {
+            score++;
+          } else if (answers[i].value === "b" && i === 3) {
+            score++;
+          } else if (answers[i].value === "a" && i === 4) {
+            score++;
+          } else if (answers[i].value === "b" && i === 5) {
+            score++;
+          } else if (answers[i].value === "b" && i === 6) {
+            score++;
+          } else if (answers[i].value === "b" && i === 7) {
+            score++;
+          } else if (answers[i].value === "b" && i === 8) {
+            score++;
+          } else if (answers[i].value === "b" && i === 9) {
+            score++;
+          }
+        }
+
+        // Muestra el resultado
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML = "<p>Tu puntaje es: " + score + " de 10.</p>";
+      }
+    </script>
+  </body>
+</html>

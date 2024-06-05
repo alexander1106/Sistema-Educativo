@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta sobre Ahorro y Presupuesto</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .question {
+        margin-bottom: 10px;
+      }
+
+      .answers {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .answer {
+        margin-bottom: 5px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn-sig {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-left: 10%;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preguntas sobre Ahorro y Presupuesto</h1>
+      <h2>Sesión I y II</h2>
+      <form id="quizForm">
+        <!-- Pregunta 1 -->
+        <div class="question">
+          <p>
+            <strong
+              >1. ¿Cuál es el primer paso para crear un presupuesto
+              efectivo?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q1" value="a" /> a) Identificar todos
+              los ingresos y gastos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="b" /> b) Ahorrar el 10% de
+              los ingresos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="c" /> c) Invertir en la
+              bolsa de valores.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+          <p>
+            <strong
+              >2. ¿Qué porcentaje de tus ingresos recomiendan los expertos
+              ahorrar cada mes?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q2" value="a" /> a) 5%</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="b" /> b) 10%</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="c" /> c) 20%</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+          <p><strong>3. ¿Cuál de los siguientes es un gasto fijo?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q3" value="a" /> a) Ropa</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="b" /> b) Renta o
+              hipoteca</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="c" /> c)
+              Entretenimiento</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+          <p><strong>4. ¿Qué es un fondo de emergencia?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q4" value="a" /> a) Dinero guardado
+              para compras imprevistas.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="b" /> b) Dinero reservado
+              para emergencias médicas.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="c" /> c) Ahorros
+              equivalentes a 3-6 meses de gastos esenciales.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+          <p>
+            <strong
+              >5. ¿Cuál es la mejor forma de reducir los gastos
+              variables?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q5" value="a" /> a) Reducir el pago de
+              la hipoteca.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="b" /> b) Comer fuera de casa
+              menos frecuentemente.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="c" /> c) Aumentar los
+              ingresos.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+          <p><strong>6. ¿Qué es el "ahorro automatizado"?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q6" value="a" /> a) Transferir
+              manualmente dinero a una cuenta de ahorros cada mes.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q6" value="b" /> b) Configurar
+              transferencias automáticas a una cuenta de ahorros.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q6" value="c" /> c) Guardar dinero en
+              efectivo en casa.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+          <p>
+            <strong
+              >7. ¿Cuál es la ventaja principal de tener un presupuesto?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q7" value="a" /> a) Aumenta
+              automáticamente los ingresos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q7" value="b" /> b) Ayuda a tomar
+              decisiones financieras informadas.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q7" value="c" /> c) Elimina todos los
+              gastos.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+          <p>
+            <strong
+              >8. ¿Qué significa vivir dentro de tus posibilidades?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q8" value="a" /> a) Gastar menos de lo
+              que ganas.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q8" value="b" /> b) Utilizar tarjetas
+              de crédito para todas las compras.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q8" value="c" /> c) Pedir prestado para
+              cubrir gastos mensuales.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+          <p>
+            <strong
+              >9. ¿Cuál es una estrategia efectiva para ahorrar dinero?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q9" value="a" /> a) Comprar
+              impulsivamente.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q9" value="b" /> b) Comparar precios y
+              buscar descuentos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q9" value="c" /> c) No llevar registro
+              de los gastos.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+          <p>
+            <strong
+              >10. ¿Qué debería incluirse en un presupuesto mensual?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q10" value="a" /> a) Solo los
+              ingresos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q10" value="b" /> b) Solo los
+              gastos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q10" value="c" /> c) Ingresos, gastos y
+              ahorros.</label
+            >
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="button" onclick="calculateScore()">
+          ENVIAR RESPUESTAS
+        </button>
+        <a href="prueba2.html" class="btn-sig"> SIGUIENTE EVALUACIÓN </a>
+      </form>
+      <!-- Espacio para mostrar el resultado -->
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateScore() {
+        document.querySelector(".btn-sig").style.display = "inline-block";
+
+        // Obtiene todas las respuestas seleccionadas
+        var answers = document.querySelectorAll('input[type="radio"]:checked');
+        var score = 0;
+
+        // Compara las respuestas seleccionadas con las respuestas correctas
+        for (var i = 0; i < answers.length; i++) {
+          if (answers[i].value === "a" && i === 0) {
+            score++;
+          } else if (answers[i].value === "c" && i === 1) {
+            score++;
+          } else if (answers[i].value === "b" && i === 2) {
+            score++;
+          } else if (answers[i].value === "c" && i === 3) {
+            score++;
+          } else if (answers[i].value === "b" && i === 4) {
+            score++;
+          } else if (answers[i].value === "b" && i === 5) {
+            score++;
+          } else if (answers[i].value === "b" && i === 6) {
+            score++;
+          } else if (answers[i].value === "a" && i === 7) {
+            score++;
+          } else if (answers[i].value === "b" && i === 8) {
+            score++;
+          } else if (answers[i].value === "c" && i === 9) {
+            score++;
+          }
+        }
+
+        // Muestra el resultado
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML = "<p>Tu puntaje es: " + score + " de 10.</p>";
+      }
+    </script>
+  </body>
+</html>
