@@ -600,18 +600,21 @@ ul > li {
 	/*font-size: 4rem;*/
 	font-weight: bold;
 	background: transparent;
+	height: 300px;
+	width: 10px;
+	font-size:40px;
 	border: none;
 	/*color: #fff;*/
 	cursor: pointer;
+
 }
 .banner img {
-	opacity: 80%; /* Cambia este valor para ajustar el nivel de opacidad */
+	opacity: 70%; /* Cambia este valor para ajustar el nivel de opacidad */
   }
 .banner #owl-four-nav {
 	position: absolute;
+	height: 10px;
 	top: 20%;
-	height: 300px;	
-	
 	left: 0;
 	z-index: 9;
 }
@@ -1163,9 +1166,6 @@ aside .news-letter hr {
 	margin-left: 0.8em;
 }
 
-.owl-four owl-carousel img{
-	opacity: 10%;
-}
 
 
 .comments-area ol{
@@ -1656,10 +1656,6 @@ aside .news-letter hr {
 	/*color: #000;*/
 }
 
-.course-detail p {
-	/*font-size: 1.6rem;*/
-	/*color: #646464;*/
-}
 
 .course-detail .course-intro p {
 	margin-top: 1.25em;
@@ -1906,7 +1902,7 @@ aside .reserve-course input[type="email"],
 RESPONSIVE STYLESHEET
 ===========================*/
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1099px) {
 	.container {
 		max-width: 1000px;
 		padding-left: 15px;
@@ -1932,7 +1928,7 @@ RESPONSIVE STYLESHEET
 	padding: 1em;
 	top: 3%;
 	}
-
+	
 	/*===What Other Say*/
 	.what-other-say .container {
 	padding: 4.375em 1em;
@@ -2102,6 +2098,10 @@ RESPONSIVE STYLESHEET
 		display: none;
 		font-size: 40px;
 		cursor: pointer;
+		color: rgb(97, 97, 97);
+		position: absolute;
+		margin-top: -30px;
+		margin-right: 3999px;
 	}
 
 	.menu-list > li > .sub-menu::before {
@@ -2286,18 +2286,25 @@ RESPONSIVE STYLESHEET
 	}
 	#btn-eva{
 		width: 100%;
-		height: 6vh;
+		height: 8vh;
 	}
-	.container {
-		max-width: 450px;
-	}
+	
 	.titulo-curso1{
 		margin-top: 20px;
 		margin-left: 30px;
 	}
-	.banner-img{
-		overflow:hidden;
+	.banner{
+		overflow: hidden;
+		height:80%;
+		position:relative;
 	}
+	.banner img{
+		height:300px;
+		opacity:80%;
+
+	}
+	.owl-four owl-carousel img{opacity: 90%;}
+	
 
 	.site-header .top-header .container {
 		display: grid;
@@ -2497,6 +2504,12 @@ RESPONSIVE STYLESHEET
 	.top-header-right .social-list li {
 		margin-right: 40px;
 	}
+	#btn-eva{
+		padding: 10px;
+		width: 88%;
+		margin-left:-70px;
+		
+	}
 
 	.top-header-right .social-list li:nth-last-child(n+3){
 		margin-bottom: 30px;
@@ -2504,21 +2517,24 @@ RESPONSIVE STYLESHEET
 
 	.top-header-right .social-list li svg {
 		font-size: 25px;
-	}
-	/*Banner Container*/
 
-	.banner .container {
-		left: 1rem;
-		right: 1rem;
 	}
+
 
 	.banner .container h1 {
-		font-size: 2.5rem;
+
+		font-size: 3rem;
 		margin-top: 0.5em;
+		width: 80vw;
+		margin-left: -30%;
 	}
 
 	.banner .container h3 {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
+		width: 80vw;
+		margin-left: -30%;
+
+
 	}
 
 	#owl-four-nav button {
