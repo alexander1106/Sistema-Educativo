@@ -950,37 +950,7 @@ ul > li {
 	border-bottom-left-radius: 5px;
 }
 
-.grid-box-wrap .grid-body h4{
-	/*font-size: 1.4rem;*/
-	/*font-family: 'Raleway', sans-serif;*/
-	/*color: #5c5c5c;*/
-	font-weight: normal;
-}
 
-.grid-box-wrap .grid-body h1 {
-	/*font-size: 2rem;*/
-	/*font-family: 'Raleway', sans-serif;*/
-	/*color: #000;*/
-	margin-top: 0.9em;
-	margin-bottom: 1.15em;
-}
-
-.grid-box-wrap .grid-body p {
-	/*font-size: 1.6rem;*/
-	/*font-family: 'Raleway', sans-serif;*/
-	/*color: #5c5c5c;*/
-}	
-
-.grid-box-wrap .grid-body a {
-	/*text-decoration: none;*/
-	display: block;
-	text-transform: uppercase;
-	/*font-size: 1.6rem;*/
-	/*font-family: 'Raleway',sans-serif;*/
-	/*color: #2b74b8;*/
-	margin-top: 1.875em;
-	margin-bottom: 0.6875em;
-}
 
 /*======Aside=============*/
 
@@ -1955,11 +1925,7 @@ RESPONSIVE STYLESHEET
 		font-size: 20px;
 	}
 
-	/*===========Gallery=========*/
-	.gallery-images-section {
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	}
-
+	
 	/*====UPcomming Event====*/
 	.event-wrap .details {
 	width: 70%;
@@ -2302,15 +2268,32 @@ RESPONSIVE STYLESHEET
 @media screen and (max-width: 767px) {
 	.contenedor1{
 		display: block;
-		width: 100%;
-		background-color:red;
+		width: 90%;
 		padding-left: 90px;
+		margin-bottom: 10px;
 	}
 	.contenedor1 h3{
 		display: none;
 	}
+	.sesion{
+		width: 80vw;
+		margin-left: -50px;
+	}
+	.contenedor1 img{
+		position: relative;
+		width: 100vw;
+		display: none;
+	}
+	#btn-eva{
+		width: 100%;
+		height: 6vh;
+	}
 	.container {
 		max-width: 450px;
+	}
+	.titulo-curso1{
+		margin-top: 20px;
+		margin-left: 30px;
 	}
 	.banner-img{
 		overflow:hidden;
