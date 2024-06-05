@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Simple validation
     if (username === 'usuario' && password === 'contraseña') {
       document.getElementById('message').innerHTML = 'Inicio de sesión exitoso';
-      window.location.href = 'index.html';
+      window.location.href = 'edulab/index.html';
 
 
     } else {

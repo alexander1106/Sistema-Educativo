@@ -2279,6 +2279,14 @@ RESPONSIVE STYLESHEET
 }
 
 @media screen and (max-width: 767px) {
+	.contenedor1{
+		display: block;
+		width: 100%;
+		padding-left: 90px;
+	}
+	.contenedor1 h3{
+		display: none;
+	}
 	.container {
 		max-width: 450px;
 	}
