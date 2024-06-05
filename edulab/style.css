@@ -2282,6 +2282,7 @@ RESPONSIVE STYLESHEET
 	.contenedor1{
 		display: block;
 		width: 100%;
+		background-color:red;
 		padding-left: 90px;
 	}
 	.contenedor1 h3{
