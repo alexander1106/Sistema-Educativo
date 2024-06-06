@@ -555,12 +555,9 @@ ul > li {
 /*===============Banner Images===========*/
 .banner {
 	position: relative;
-	margin-bottom: -8px;
+	overflow: hidden;
 }
 
-.banner img {
-	width: 100%;
-}
 
 .banner .container {
 	position: absolute;
@@ -595,6 +592,10 @@ ul > li {
 	display: flex;
 	justify-content: space-between;
 }
+.owl-nav {
+	margin-top: -30px !important;
+	
+}
 
 .banner .owl-nav .owl-prev, .banner .owl-nav .owl-next{
 	/*font-size: 4rem;*/
@@ -602,6 +603,7 @@ ul > li {
 	background: transparent;
 	height: 300px;
 	width: 10px;
+	opacity:50%;
 	font-size:40px;
 	border: none;
 	/*color: #fff;*/
@@ -2300,7 +2302,7 @@ RESPONSIVE STYLESHEET
 	}
 	.banner img{
 		height:300px;
-		opacity:80%;
+		opacity:70%;
 
 	}
 	.owl-four owl-carousel img{opacity: 90%;}
@@ -2510,6 +2512,7 @@ RESPONSIVE STYLESHEET
 		margin-left:-70px;
 		
 	}
+	
 
 	.top-header-right .social-list li:nth-last-child(n+3){
 		margin-bottom: 30px;
@@ -2520,19 +2523,18 @@ RESPONSIVE STYLESHEET
 
 	}
 
-
 	.banner .container h1 {
 
 		font-size: 3rem;
 		margin-top: 0.5em;
 		width: 80vw;
-		margin-left: -30%;
+		margin-left: -40%;
 	}
 
 	.banner .container h3 {
 		font-size: 1.4rem;
 		width: 80vw;
-		margin-left: -30%;
+		margin-left: -40%;
 
 
 	}
@@ -2743,13 +2745,8 @@ RESPONSIVE STYLESHEET
 	justify-content: space-between;
 }
 
-.what-other-say .owl-carousel .owl-nav button.owl-prev,
-.what-other-say .owl-nav button.owl-next {
-	border: 2px solid #fff;
-	padding: 0.2rem 1.4rem !important;
-}
 
-.what-other-say .owl-carousel .owl-nav button.owl-prev:hover,
-.what-other-say .owl-nav button.owl-next:hover {
-	background: #12a84e;
+.owl-nav .owl-next{
+	transform: rotate(180deg);
+
 }
