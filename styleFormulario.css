@@ -1,61 +1,53 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
+  margin: 0;
 }
 
-.container {
-  background-color: #fff;
-  width: 70%; /* Cambiado a un porcentaje mayor para que el formulario sea más ancho */
-  max-width: 400px; /* Agregado para limitar el ancho máximo del formulario */
-  padding: 40px;
+#login-container, #register-container {
+  background: white;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
 }
 
-.form-group {
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input {
+  margin-bottom: 10px;
+}
+input{
+  height: 30px;
   margin-bottom: 20px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  padding-left:10px;
+  
 }
 
-label {
-  display: block;
-  margin-bottom: 15px;
-  margin-top:20px
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 94%; /* Cambiado a 100% para que los campos de entrada ocupen todo el ancho disponible */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+#register-button{
+  width:100%;
+  margin-top: 10px;
 }
 
 button {
-  width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
-  margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
+  background-color: #007BFF;
+  color: white;
   cursor: pointer;
 }
 
 button:hover {
   background-color: #0056b3;
-}
-
-#message {
-  text-align: center;
-  margin-top: 20px;
 }
