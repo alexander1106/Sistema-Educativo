@@ -2755,7 +2755,7 @@ RESPONSIVE STYLESHEET
 
 
 /*Nueva implementacion */
-#register-container {
+.register-container,  .register-container1{
     background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
@@ -2764,17 +2764,16 @@ RESPONSIVE STYLESHEET
     text-align: center;
 	position: relative;
 }
-#course-container{
+.course-container, .course-container1 {
 	width: 87%;
 	z-index: 3000;
 	margin: auto;
 	margin-top: 50px;
 	text-align: right;
 }
- #schedule-container, #confirmation-container {
+ .schedule-container, .schedule-container1, .confirmation-container,.confirmation-container1 {
     background: rgb(255, 255, 255);
 	z-index: 900;
-	
 	position: absolute;
     padding: 20px;
     border-radius: 8px;
@@ -2785,14 +2784,21 @@ RESPONSIVE STYLESHEET
 	margin-left: 10px;
     text-align: center;
 }
-#accept-schedule-button{
+
+.accept-schedule-button, .accept-schedule-button1{
 	margin-top: 20px;
 }
 
-#schedule-container h2{
+.schedule-container h2{
 	font-size: 35px ;
 }
-#schedule-container p{
+.schedule-container1 h2{
+	font-size: 35px ;
+}
+.schedule-container p{
+	font-size: 15px;
+}
+.schedule-container1 p{
 	font-size: 15px;
 }
 button {
@@ -2803,7 +2809,7 @@ button {
     border-radius: 8px;
     background-color: #2768aa;
     color: white;
-	margin-top: -10px;
+	margin-top: -2px;
 	margin-right: 13px;
     cursor: pointer;
 	position: relative;

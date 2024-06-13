@@ -139,21 +139,26 @@
                 />
               </div>
               <div class="news-detail" itemprop="description">
-                <a href="primerCurso1.html"
-                  ><h1>Educación financiera para emprendedores Mype</h1></a
-                >
+                <h1>Educación financiera para emprendedores Mype</h1>
                 <p>
                   "Enseñarles a emprendedores de Tarapoto a manejar y
                   administrar el dinero de su negocio"
                 </p>
               </div>
-              <div id="course-container">
-                <button id="enroll-button">Inscribirse</button>
+              <div class="course-container">
+                <button class="enroll-button" data-url="segundoCurso.html">
+                  Inscribirse
+                </button>
               </div>
-              <div id="schedule-container" style="display: none">
+              <div class="schedule-container" style="display: none">
                 <h2>Horario del Curso</h2>
-                <p>Lunes a Sabado: 07:00 PM - 09:00 PM</p>
-                <button id="accept-schedule-button">Aceptar Horario</button>
+                <p>Lunes a Sábado: 07:00 PM - 09:00 PM</p>
+                <button
+                  class="accept-schedule-button"
+                  data-redirect="primerCurso1.html"
+                >
+                  Aceptar Horario
+                </button>
               </div>
             </div>
 
@@ -162,23 +167,27 @@
                 <img src="images/adultos.jpg" alt="Latest News Images" />
               </div>
               <div class="news-detail" itemprop="description">
-                <a href="segundoCurso.html"
-                  ><h1>Alfabetización Digital para adultos</h1></a
-                >
-
+                <h1>Alfabetización Digital para adultos</h1>
                 <p>
                   "Capacitar adultos en alfabetización digital para potenciar su
                   integración social y facilitar su acceso a oportunidades
                   laborales y educativas."
                 </p>
               </div>
-              <div id="course-container">
-                <button id="enroll-button">Inscribirse</button>
+              <div class="course-container">
+                <button class="enroll-button" data-url="primerCurso1.html">
+                  Inscribirse
+                </button>
               </div>
-              <div id="schedule-container" style="display: none">
+              <div class="schedule-container" style="display: none">
                 <h2>Horario del Curso</h2>
-                <p>Lunes a Sabado: 07:00 PM - 09:00 PM</p>
-                <button id="accept-schedule-button">Aceptar Horario</button>
+                <p>Lunes a Sábado: 07:00 PM - 09:00 PM</p>
+                <button
+                  class="accept-schedule-button"
+                  data-redirect="segundoCurso.html"
+                >
+                  Aceptar Horario
+                </button>
               </div>
             </div>
 
@@ -227,16 +236,27 @@
         </div>
       </footer>
     </div>
-    <script src="matricula.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".enroll-button").click(function () {
+          $(this).closest(".course-container").hide();
+          $(this).closest(".news-wrap").find(".schedule-container").show();
+        });
+
+        $(".accept-schedule-button").click(function () {
+          alert("Su matrícula ha sido exitosa");
+          const redirectUrl = $(this).data("redirect");
+          window.location.href = redirectUrl;
+        });
+      });
+    </script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/all.js"></script>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="js/jquery.rateyo.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery.mmenu.all.js"></script> -->
-    <!-- <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script> -->
     <script type="text/javascript" src="js/custom.js"></script>
   </body>
 </html>
