@@ -785,9 +785,9 @@ ul > li {
 /*===Latest New =================*/
 
 .news-wrap {
-	background-color: #007BFF;
 	position: relative;
 	width: 100%;
+	margin-bottom:8vh !important ;
 	height: 450px;
 	padding-bottom: 40px;
 }
@@ -2395,8 +2395,7 @@ RESPONSIVE STYLESHEET
 	#btn-eva{
 		padding: 10px;
 		width: 88%;
-		margin-left:-70px;
-		
+		margin-left:-70px;		
 	}
 	
 
@@ -2406,7 +2405,6 @@ RESPONSIVE STYLESHEET
 
 	.top-header-right .social-list li svg {
 		font-size: 25px;
-
 	}
 
 	.banner .container h1 {
@@ -2421,8 +2419,6 @@ RESPONSIVE STYLESHEET
 		font-size: 1.4rem;
 		width: 80vw;
 		margin-left: -40%;
-
-
 	}
 
 	#owl-four-nav button {
@@ -2521,6 +2517,50 @@ RESPONSIVE STYLESHEET
 	.nav-menu li > a {
 		color: #fff;
 	}
+
+	.register-container{
+		background: rgb(80, 29, 175);
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		width: 30px;
+		text-align: center;
+		position: relative;
+	}
+	.course-container {
+		width: 87%;
+		z-index: 3000;
+		margin: auto;
+		margin-top: 50px;
+		text-align: right;
+	}
+	 .schedule-container{
+		padding: 20px;
+		border-radius: 1px;
+		box-shadow: 1px 1px 10px 1px  rgb(0, 0, 0);
+		width: 75vw !important;
+		margin-top: -50% !important;
+		height:45vh !important;
+	}
+	
+	.news-wrap{
+		margin-bottom: -15px !important;
+	}
+
+	.enroll-button {
+		padding-top: 15px;
+		width: 50% !important;
+		margin-right:22% !important;
+		margin-top: 21vh !important;
+	}
+	
+	button:hover {
+		background-color: #0056b3;
+	}
+	.accept-schedule-button{
+		width: 80% !important;
+	}
+	
 }
 
 .what-other-say .wrap-others-say #carousel .flex-active-slide {
@@ -2557,10 +2597,7 @@ RESPONSIVE STYLESHEET
 	margin-top: 50px;
 }
 
-.article-subtitle{
-	font-size: 3rem;
-	color: #12a84e;
-}
+
 
 .what-other-say .container .head {
 	font-size: 3.5rem;
@@ -2572,14 +2609,6 @@ RESPONSIVE STYLESHEET
 	position: relative;
 }
 
-.what-other-say .container .head::after {
-	position: absolute;
-	content: '';
-	border: 2.5px solid #12a84e;
-	width: 90px;
-	left: 46%;
-	bottom: 0;
-}
 
 
 .what-other-say .container .customer-item {
@@ -2673,6 +2702,17 @@ RESPONSIVE STYLESHEET
 
 .accept-schedule-button{
 	margin-top: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    border: none;
+	font-weight: 600;
+	width: 30%;
+	font-size: 15px;
+    border-radius: 8px;
+    background-color: #2768aa;
+    color: white;
+    cursor: pointer;
+	position: relative;
 }
 
 .schedule-container h2{
@@ -2687,7 +2727,7 @@ RESPONSIVE STYLESHEET
 .schedule-container1 p{
 	font-size: 15px;
 }
-button {
+.enroll-button {
 	padding-top: 15px;
 	padding-bottom: 12px;
     border: none;
@@ -2697,11 +2737,13 @@ button {
     border-radius: 8px;
     background-color: #2768aa;
     color: white;
-	margin-top: 10px;
-	
+	margin-top: 25px;
     cursor: pointer;
+	margin-bottom:200px !important;
 	position: relative;
+	overflow: hidden;
 }
+
 
 button:hover {
     background-color: #0056b3;
