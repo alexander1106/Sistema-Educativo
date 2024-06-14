@@ -12,7 +12,6 @@ document
       (user) => user.username === username && user.password === password
     );
     if (user) {
-      alert("Inicio de sesión exitoso");
       window.location.href = "edulab/index.html"; // Replace with the URL of the homepage
     } else {
       alert("Usuario o contraseña incorrectos");
