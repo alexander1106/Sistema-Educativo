@@ -21,6 +21,8 @@
     />
   </head>
   <body>
+    <div class="overlay"></div>
+    <div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
     <div
       id="page"
       class="site"
@@ -240,6 +242,7 @@
     <script>
       $(document).ready(function () {
         $(".enroll-button").click(function () {
+          $(".overlay").show(); // Mostrar el overlay
           $(this).closest(".course-container").hide();
           $(this).closest(".news-wrap").find(".schedule-container").show();
         });
@@ -249,7 +252,14 @@
           const redirectUrl = $(this).data("redirect");
           window.location.href = redirectUrl;
         });
+
+        // Ocultar el contenedor y el overlay al hacer clic en el fondo
+        $(".overlay").click(function () {
+          $(this).hide();
+          $(".schedule-container").hide();
+        });
       });
+
     </script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/all.js"></script>
