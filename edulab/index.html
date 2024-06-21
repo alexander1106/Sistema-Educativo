@@ -19,53 +19,59 @@
       href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700"
       rel="stylesheet"
     />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        border-radius: 15px;
+        text-transform: bold;
+        font-weight: 700;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .modal-button {
+        background-color: #0056b3;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        padding: 10px 30px;
+      }
+    </style>
   </head>
   <body>
     <div class="overlay"></div>
-    <div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
     <div
       id="page"
       class="site"
       itemscope
       itemtype="http://schema.org/LocalBusiness"
     >
-      <header class="site-header">
-        <div class="top-header">
-          <div class="container">
-            <div class="top-header-left">
-              <div class="top-header-block">
-                <a href="mailto:info@educaciongratis.com" itemprop="email"
-                  ><i class="fas fa-envelope"></i>
-                  educacionfinancioera@gmail.com</a
-                >
-              </div>
-              <div class="top-header-block">
-                <a href="tel:+999999999" itemprop="telephone"
-                  ><i class="fas fa-phone"></i> +999999999</a
-                >
-              </div>
-              <div class="social-block">
-                <ul class="social-list">
-                  <li>
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fas fa-shopping-cart"></i> </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="top-header-right">
-              <div class="login-block">
-                <a href="index.html">Matricularse</a>
-                <a href="">Salir</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div
+        id="page"
+        class="site"
+        itemscope
+        itemtype="http://schema.org/LocalBusiness"
+      >
         <!-- Top header Close -->
         <div class="main-header">
           <div class="container">
@@ -80,16 +86,14 @@
                   <li class="menu-parent">
                     Cursos
                     <ul class="sub-menu">
-                      <li class="menu-parent">
-                        Educacion Financiera
-                        <ul class="sub-menu">
-                          <li><a href="primerCurso1.html">Curso 1</a></li>
-                          <li><a href="segundoCurso.html">Curso 2</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="primerCurso1.html">Curso 1</a></li>
+                      <li><a href="segundoCurso.html">Curso 2</a></li>
+                      <li><a href="segundoCurso.html">Curso 3</a></li>
                     </ul>
                   </li>
                   <li><a href="">Contact</a></li>
+                  <button><a href="index.html">Matricularse</a></button>
+                  <button><a href="">Salir</a></button>
                 </ul>
               </nav>
               <div id="bar">
@@ -101,169 +105,188 @@
             </div>
           </div>
         </div>
-      </header>
-      <!-- Header Close -->
-      <div class="banner">
-        <div class="owl-four owl-carousel" id="banner-img" itemprop="image">
-          <img src="images/BANNER1.jpg" alt="Educacion Financiera" />
-          <img src="images/BANNER2.jpg" alt="Educacion Financiera" />
-          <img src="images/BANNER3.jpg" alt="Educacion Financiera" />
+        <!-- Header Close -->
+        <div class="banner">
+          <div class="owl-four owl-carousel" id="banner-img" itemprop="image">
+            <img src="images/BANNER1.jpg" alt="Educacion Financiera" />
+            <img src="images/BANNER2.jpg" alt="Educacion Financiera" />
+            <img src="images/BANNER3.jpg" alt="Educacion Financiera" />
+          </div>
+          <div class="container" itemprop="description" id="con">
+            <h1 class="h1">BIENVENIDOS A ESTE SISTEMA EDUCATIVO VIRTUAL</h1>
+            <h3>
+              Adéntrate en el mundo de la banca móvil: un programa educativo
+              diseñado para equipar a emprendedores con las habilidades
+              necesarias para triunfar en el comercio moderno
+            </h3>
+          </div>
+          <div id="owl-four-nav" class="owl-nav"></div>
         </div>
-        <div class="container" itemprop="description" id="con">
-          <h1 class="h1">BIENVENIDOS A ESTE SISTEMA EDUCATIVO VIRTUAL</h1>
-          <h3>
-            Adéntrate en el mundo de la banca móvil: un programa educativo
-            diseñado para equipar a emprendedores con las habilidades necesarias
-            para triunfar en el comercio moderno
-          </h3>
-        </div>
-        <div id="owl-four-nav" class="owl-nav"></div>
-      </div>
 
-      <section class="page-heading">
-        <div class="container">
-          <h2>CURSOS DISPONIBLES</h2>
-        </div>
-      </section>
-      <section class="latest-news">
-        <div
-          class="container"
-          itemprop="event"
+        <section class="page-heading">
+          <div class="container">
+            <h2>CURSOS DISPONIBLES</h2>
+          </div>
+        </section>
+        <section class="latest-news">
+          <div
+            class="container"
+            itemprop="event"
+            itemscope
+            itemtype=" http://schema.org/Event"
+          >
+            <div class="owl-two owl-carousel">
+              <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                  <img
+                    src="images/Educación financiera para emprendedores Mype.png"
+                    alt="Latest News Images"
+                  />
+                </div>
+                <div class="news-detail" itemprop="description">
+                  <h1>Ahorrando para cumplir mis metas – factoring</h1>
+                  <p>
+                    "Enseñarles a emprendedores de Tarapoto a manejar y
+                    administrar el dinero de su negocio"
+                  </p>
+                </div>
+                <div class="course-container">
+                  <button class="enroll-button" data-url="segundoCurso.html">
+                    Inscribirse
+                  </button>
+                </div>
+              </div>
+
+              <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                  <img src="images/adultos.jpg" alt="Latest News Images" />
+                </div>
+                <div class="news-detail" itemprop="description">
+                  <h1>Formacion de emprendedores innovadores</h1>
+                  <p>
+                    "En este programa, les brindaremos las herramientas,
+                    conocimientos y habilidades para desarrollar proyectos
+                    emprendedores."
+                  </p>
+                </div>
+                <div class="course-container">
+                  <button class="enroll-button" data-url="primerCurso1.html">
+                    Inscribirse
+                  </button>
+                </div>
+              </div>
+
+              <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                  <img src="images/markteting.jpeg" alt="Latest News Images" />
+                </div>
+                <div class="news-detail" itemprop="description">
+                  <h1>Marketing digital de emprendedores</h1>
+                  <p>
+                    "Ayudar a los emprendedores a mejorar sus estrategias de
+                    marketing para aumentar sus ventas"
+                  </p>
+                </div>
+                <div class="course-container">
+                  <button class="enroll-button" data-url="primerCurso1.html">
+                    Inscribirse
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer
+          class="page-footer"
+          itemprop="footer"
           itemscope
-          itemtype=" http://schema.org/Event"
+          itemtype="http://schema.org/WPFooter"
         >
-          <div class="owl-two owl-carousel">
-            <div class="news-wrap" itemprop="event">
-              <div class="news-img-wrap" itemprop="image">
-                <img
-                  src="images/Educación financiera para emprendedores Mype.png"
-                  alt="Latest News Images"
-                />
-              </div>
-              <div class="news-detail" itemprop="description">
-                <h1>Educación financiera para emprendedores Mype</h1>
-                <p>
-                  "Enseñarles a emprendedores de Tarapoto a manejar y
-                  administrar el dinero de su negocio"
-                </p>
-              </div>
-              <div class="course-container">
-                <button class="enroll-button" data-url="segundoCurso.html">
-                  Inscribirse
-                </button>
-              </div>
-              <div class="schedule-container" style="display: none">
-                <h2>Horario del Curso</h2>
-                <p>Lunes: 07:00 AM - 09:00 AM</p>
-                <p>Miercoles: 07:00 AM-09:00 AM</p>
-                <p>Viernes: 07:00 AM - 09:00 AM</p>
-                <button
-                  class="accept-schedule-button"
-                  data-redirect="primerCurso1.html"
-                >
-                  Aceptar Horario
-                </button>
-              </div>
-            </div>
-
-            <div class="news-wrap" itemprop="event">
-              <div class="news-img-wrap" itemprop="image">
-                <img src="images/adultos.jpg" alt="Latest News Images" />
-              </div>
-              <div class="news-detail" itemprop="description">
-                <h1>Alfabetización Digital para adultos</h1>
-                <p>
-                  "Capacitar adultos en alfabetización digital para potenciar su
-                  integración social y facilitar su acceso a oportunidades
-                  laborales y educativas."
-                </p>
-              </div>
-              <div class="course-container">
-                <button class="enroll-button" data-url="primerCurso1.html">
-                  Inscribirse
-                </button>
-              </div>
-              <div class="schedule-container" style="display: none">
-                <h2>Horario del Curso</h2>
-                <p>Martes 07:00 PM - 09:00 PM</p>
-                <p>Jueves 07:00 PM - 09:00 PM</p>
-                <p>Sabado 07:00 PM - 09:00 PM</p>
-                <button
-                  class="accept-schedule-button"
-                  data-redirect="segundoCurso.html"
-                >
-                  Aceptar Horario
-                </button>
-              </div>
-            </div>
-
-            <div class="news-wrap" itemprop="event">
-              <div class="news-img-wrap" itemprop="image"></div>
+          <!-- End of box-Wrap -->
+          <div class="footer-second-section">
+            <div class="container">
+              <hr class="footer-line" />
+              <ul class="social-list">
+                <li>
+                  <a href=""><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-skype"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+              <hr class="footer-line" />
             </div>
           </div>
-        </div>
-      </section>
-
-      <footer
-        class="page-footer"
-        itemprop="footer"
-        itemscope
-        itemtype="http://schema.org/WPFooter"
-      >
-        
-        <!-- End of box-Wrap -->
-        <div class="footer-second-section">
-          <div class="container">
-            <hr class="footer-line" />
-            <ul class="social-list">
-              <li>
-                <a href=""><i class="fab fa-facebook-square"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-skype"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-youtube"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
-            <hr class="footer-line" />
+          <div class="footer-last-section">
+            <div class="container">
+              <p>Copyright 2024 &copy; educacionfinancioera@gmail.com</p>
+            </div>
           </div>
-        </div>
-        <div class="footer-last-section">
-          <div class="container">
-            <p>Copyright 2024 &copy; educacionfinancioera@gmail.com</p>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="enrollModal" class="modal">
+      <div class="modal-content">
+        <p>¿Seguro que quieres inscribirte?</p>
+        <button id="confirmEnroll" class="modal-button">Sí</button>
+        <button id="cancelEnroll" class="modal-button">No</button>
+      </div>
+    </div>
+
+    <!-- Success Modal Structure -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <p>Su matrícula ha sido exitosa</p>
+        <button id="closeSuccess" class="modal-button">Ok</button>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script>
       $(document).ready(function () {
+        let enrollUrl = "";
+
         $(".enroll-button").click(function () {
+          enrollUrl = $(this).data("url");
           $(".overlay").show(); // Mostrar el overlay
-          $(this).closest(".course-container").hide();
-          $(this).closest(".news-wrap").find(".schedule-container").show();
+          $("#enrollModal").show(); // Mostrar el modal de confirmación
         });
 
-        $(".accept-schedule-button").click(function () {
-          alert("Su matrícula ha sido exitosa");
-          const redirectUrl = $(this).data("redirect");
-          window.location.href = redirectUrl;
+        $("#confirmEnroll").click(function () {
+          $("#enrollModal").hide(); // Ocultar el modal de confirmación
+          $("#successModal").show(); // Mostrar el modal de éxito
         });
 
-        // Ocultar el contenedor y el overlay al hacer clic en el fondo
+        $("#closeSuccess").click(function () {
+          $(".overlay").hide(); // Ocultar el overlay
+          $("#successModal").hide(); // Ocultar el modal de éxito
+          window.location.href = enrollUrl;
+        });
+
+        $("#cancelEnroll").click(function () {
+          $(".overlay").hide(); // Ocultar el overlay
+          $("#enrollModal").hide(); // Ocultar el modal de confirmación
+        });
+
+        // Ocultar el modal y el overlay al hacer clic en el fondo
         $(".overlay").click(function () {
           $(this).hide();
-          $(".schedule-container").hide();
+          $("#enrollModal").hide();
+          $("#successModal").hide();
         });
       });
-
     </script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/all.js"></script>

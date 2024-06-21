@@ -36,126 +36,10 @@ img {
 }
 
 button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
-}
-
-button,
 input { /* 1 */
 	overflow: visible;
 }
 
-
-
-button,
-select { /* 1 */
-	text-transform: none;
-}
-
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
-
-legend {
-	box-sizing: border-box; /* 1 */
-	color: inherit; /* 2 */
-	display: table; /* 1 */
-	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
-	white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-	vertical-align: baseline;
-}
-
-
-
-
-
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	margin: 0;
-}
-
-p {
-	margin: 0;
-}
-
-dfn, cite, em, i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
 
 pre {
 	background: #eee;
@@ -373,46 +257,6 @@ a:hover, a:active {
 }
 
 
-.top-header .container {
-	display: flex;
-	flex: 1;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-}
-
-.top-header .container .top-header-left svg {
-	margin-right: 0.9rem;
-
-}
-
-
-.top-header-left {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.top-header-block {
-	margin-right: 4.5rem;
-}
-
-.top-header-right {
-	display: flex;
-	flex-flow: row wrap;
-	font-size: 18px;
-	padding: 5px;
-}
-
-.top-header-right ul, li {
-	margin: 0;
-	padding: 0;
-}
-
-.top-header-right li {
-	display: inline-block;
-}
-
 
 .social-block {
 	margin-right: 8.5rem;
@@ -422,19 +266,6 @@ a:hover, a:active {
 	transform: scale(1.7);
 }
 
-.top-header-right .login-block a {
-	background-color: #224a8f;
-	padding: 8px;
-	font-size: 17px !important;
-	padding-left: 20px;
-	padding-right: 20px;
-	border-radius: 8px;
-	margin-right: 20px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.top-header-right .login-block a:hover{
-	background-color: #255fc2;
-}
 .social-list{
 	display: flex;
 	font-size: 14px;
@@ -448,6 +279,15 @@ a:hover, a:active {
 /*=================Menu Navigation===============*/
 .main-header{
 	box-shadow: 1px 1px 10px 1px black;
+	background-color: rgb(4, 4, 29);
+	height:7%;
+	color: white !important;
+}
+.main-header a{
+	color: white;
+}
+.main-header li{
+	color:white;
 }
 .main-header .container {
 	display: flex;
@@ -458,11 +298,11 @@ a:hover, a:active {
 	padding-bottom: 0.5em;
 }
 
-
 .nav-desktop {
 	display: inline-block;
 	padding-right: 30px;
 	margin-right: 40px;
+	width: 99%;
 }
 
 .nav-desktop li, .nav-desktop li a{
@@ -481,11 +321,34 @@ a:hover, a:active {
 	display: none;
 	margin: 0;
 }
-
 .menu-list {
 	display: flex;
+	margin-top:6px;
 }
-
+.menu-list li a{
+	color: white;
+}
+ .menu-list li{
+	color: white;
+}
+.menu-list li:hover{
+	color: gray;
+}
+.menu-list li a:hover{
+	color: gray;
+}
+.menu-list button{
+	margin-left:10px;
+	background-color: #051b33;
+	height: 6vh;
+	color:white;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 700;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px ;
+	margin-top: 6px;
+}
 ul > li {
 	position: relative;
 }
@@ -942,10 +805,13 @@ aside .news-letter hr {
 	flex-flow: row wrap;
 	margin-bottom: 1.25em;
 }
-
+.news-img-wrap img{
+	height:52vh !important;
+}
 .page-content .post-wrap .img-wrap {
 	width: 70px;
 	object-fit: fill;
+	overflow: hidden;
 }
 
 .page-content .post-wrap .img-wrap img{
@@ -1327,7 +1193,6 @@ aside .news-letter hr {
 	/*color: #000;*/
 	margin-bottom: 2em;
 }
-
 .contact-page-section .contact-list {
 	margin: 0;
 	padding: 0;
@@ -1655,7 +1520,93 @@ aside .reserve-course input[type="email"],
 	display: block;
 	margin-top: 8px;
 }
+.primer_group{
+	width: 100%;
+	padding: 2% 10%;
+	background-color: white;
+	margin: auto;
+	display: flex;
+}
+.primer_group_text{
+	padding: 30px;
+	width:60%;
+	
+}
+.primer_group_text h1{
+	font-size: 70px;
+	color: #003053;
+}
+.primer_group img{
+	width: 40%;
+}
+ .linea1{
+	padding: 4px;
+	position:relative;
+	margin:auto;
+	width:100%;
+	margin-bottom: 20px;
+	
+}
+.linea1 h1{
+	position:relative;
+	margin:auto;
+	width:60%;
+	background-color: #000000;
+	height: 2px;
+	margin-bottom: -30px;
 
+	
+}
+.temario{
+	width:100%;
+	color:rgb(0, 0, 0);
+	padding: 20%;
+	font-family: Times, serif;
+	padding-top: 30px;
+	font-weight: 900;
+	margin-top:-10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin:auto;
+	font-size:24px;
+}
+
+.countdown-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+	margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px black !important ;
+}
+.curso1{
+	width: 70%;
+	margin-right: 30px;
+}
+.curso1 h2{
+	margin-left: 20px;
+	font-size: 27px;
+}
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#countdown div {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#countdown span {
+    font-size: 2em;
+}
+.primer_group_text p{
+	margin-left:10%;
+	font-size:19px;
+}
 .post-content .fa-facebook-f {
 	color: #131d9c;
 }
@@ -2368,16 +2319,7 @@ RESPONSIVE STYLESHEET
 		Course Listing Page
 	======================================*/
 
-	.course-listing-page .button-group::after,
-	.gallery-section2 .button-group::after{
-		width: 370px;
-		left: 5%;
-	}
 
-	.course-listing-page .grid {
-		justify-content: space-between;
-	}
-	/*testimonial*/
 
 	.testimonial-page aside {
 		width: 270px !important;
