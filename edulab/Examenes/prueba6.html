@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta sobre la Importancia de Usar Redes Sociales</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .question {
+        margin-bottom: 10px;
+      }
+
+      .answers {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .answer {
+        margin-bottom: 5px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .btn-sig {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-left: 2%;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preguntas sobre la Importancia de Usar Redes Sociales</h1>
+      <form id="quizForm">
+        <!-- Preguntas sobre la Importancia de Usar Redes Sociales -->
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+          <p>
+            <strong
+              >11. ¿Cómo pueden las redes sociales beneficiar a un pequeño
+              negocio?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q11" value="a" /> a) Permitiendo
+              compartir contenido solo con amigos cercanos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q11" value="b" /> b) Proporcionando una
+              plataforma para llegar a una audiencia más amplia y potenciales
+              clientes.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q11" value="c" /> c) Evitando el
+              contacto con los clientes.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+          <p>
+            <strong
+              >12. ¿Qué es una estrategia de marketing en redes
+              sociales?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q12" value="a" /> a) Un plan para
+              gastar menos en publicidad tradicional.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q12" value="b" /> b) Un plan detallado
+              para promocionar y vender productos o servicios a través de las
+              redes sociales.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q12" value="c" /> c) Un método para
+              contratar empleados.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+          <p>
+            <strong
+              >13. ¿Por qué es importante tener una presencia activa en redes
+              sociales?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q13" value="a" /> a) Para asegurarse de
+              que los clientes nunca te contacten.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q13" value="b" /> b) Para construir y
+              mantener una relación con tu audiencia y clientes.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q13" value="c" /> c) Para reducir el
+              número de ventas.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+          <p>
+            <strong
+              >14. ¿Qué es el contenido generado por el usuario (UGC)?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q14" value="a" /> a) Contenido creado
+              por empleados de la empresa.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q14" value="b" /> b) Contenido creado y
+              compartido por los usuarios y clientes de una marca.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q14" value="c" /> c) Contenido pagado
+              por la empresa.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+          <p>
+            <strong
+              >15. ¿Cómo pueden las redes sociales ayudar a mejorar el servicio
+              al cliente?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q15" value="a" /> a) Permitiendo
+              ignorar los comentarios de los clientes.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q15" value="b" /> b) Proporcionando una
+              plataforma para respuestas rápidas y efectivas a las consultas y
+              problemas de los clientes.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q15" value="c" /> c) Evitando el
+              contacto directo con los clientes.</label
+            >
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="button" onclick="calculateScore()">
+          ENVIAR RESPUESTAS
+        </button>
+        <a href="primerCurso1.html" class="btn-sig"> VOLVER AL CURSO </a>
+      </form>
+      <!-- Espacio para mostrar el resultado -->
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateScore() {
+        document.querySelector(".btn-sig").style.display = "inline-block";
+
+        // Obtiene todas las respuestas seleccionadas
+        var answers = document.querySelectorAll('input[type="radio"]:checked');
+        var score = 0;
+
+        // Compara las respuestas seleccionadas con las respuestas correctas
+        for (var i = 0; i < answers.length; i++) {
+          if (answers[i].value === "b" && i === 0) {
+            score++;
+          } else if (answers[i].value === "b" && i === 1) {
+            score++;
+          } else if (answers[i].value === "b" && i === 2) {
+            score++;
+          } else if (answers[i].value === "b" && i === 3) {
+            score++;
+          } else if (answers[i].value === "b" && i === 4) {
+            score++;
+          }
+        }
+        // Muestra el resultado
+        var resultContainer = document.getElementById("result");
+        resultContainer.innerHTML =
+          "<p>Has obtenido " + score + " de 5 respuestas correctas.</p>";
+      }
+    </script>
+  </body>
+</html>

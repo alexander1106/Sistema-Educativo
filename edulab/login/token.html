@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restablecer Contraseña</title>
-
     <link rel="stylesheet" href="token.css" />
   </head>
   <body>
@@ -13,18 +12,20 @@
         <span class="close-button">&times;</span>
         <h2>Restablecer Contraseña</h2>
         <form id="reset-password-form">
+          <input type="hidden" id="tokenInput" name="token" value="" />
           <input
             type="password"
             placeholder="Nueva Contraseña"
             id="new-password"
-            name="new-password"
+            name="password"
             required
           />
-          <button type="submit">Restablecer Contraseña</button>
+          <button onclick="validateFormToken()" type="button">
+            Restablecer Contraseña
+          </button>
         </form>
       </div>
     </div>
-
     <script src="token.js"></script>
   </body>
 </html>

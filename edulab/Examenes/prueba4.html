@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta sobre el Uso de una Billetera Virtual</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .question {
+        margin-bottom: 10px;
+      }
+
+      .answers {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .answer {
+        margin-bottom: 5px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .btn-sig {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-left: 2%;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preguntas sobre el Uso de una Billetera Virtual</h1>
+      <form id="quizForm">
+        <!-- Preguntas sobre el Uso de una Billetera Virtual -->
+        <!-- Pregunta 1 -->
+        <div class="question">
+          <p><strong>1. ¿Qué es una billetera virtual?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q1" value="a" /> a) Una tarjeta de
+              crédito física.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="b" /> b) Una aplicación o
+              servicio en línea que permite almacenar y gestionar dinero
+              digitalmente.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q1" value="c" /> c) Un dispositivo de
+              almacenamiento de datos.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+          <p>
+            <strong
+              >2. ¿Cuál es una ventaja de usar una billetera virtual?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q2" value="a" /> a) Siempre necesitas
+              efectivo para hacer pagos.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="b" /> b) Puedes realizar
+              pagos electrónicos de forma rápida y segura.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q2" value="c" /> c) Solo se puede usar
+              en tiendas físicas.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+          <p>
+            <strong
+              >3. ¿Qué información necesitas para configurar una billetera
+              virtual?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q3" value="a" /> a) Nombre de usuario y
+              contraseña.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="b" /> b) Datos personales y
+              de tu tarjeta bancaria.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q3" value="c" /> c) Dirección de tu
+              casa.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+          <p>
+            <strong
+              >4. ¿Cómo se pueden proteger los datos en una billetera
+              virtual?</strong
+            >
+          </p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q4" value="a" /> a) Usando una
+              contraseña fuerte y la autenticación de dos factores.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="b" /> b) Compartiendo la
+              contraseña con amigos de confianza.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q4" value="c" /> c) Escribiendo la
+              contraseña en un papel.</label
+            >
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+          <p><strong>5. ¿Qué es un pago contactless?</strong></p>
+          <div class="answers">
+            <label class="answer"
+              ><input type="radio" name="q5" value="a" /> a) Un pago realizado
+              en efectivo.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="b" /> b) Un pago realizado
+              sin contacto físico entre el dispositivo y el terminal de
+              pago.</label
+            >
+            <label class="answer"
+              ><input type="radio" name="q5" value="c" /> c) Un pago realizado a
+              través de un cheque.</label
+            >
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="button" onclick="calculateScore()">
+          ENVIAR RESPUESTAS
+        </button>
+        <a href="prueba5.html" class="btn-sig"> SIGUIENTE EVALUACIÓN </a>
+      </form>
+      <!-- Espacio para mostrar el resultado -->
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateScore() {
+        document.querySelector(".btn-sig").style.display = "inline-block";
+
+        // Obtiene todas las respuestas seleccionadas
+        var answers = document.querySelectorAll('input[type="radio"]:checked');
+        var score = 0;
+
+        // Compara las respuestas seleccionadas con las respuestas correctas
+        for (var i = 0; i < answers.length; i++) {
+          if (answers[i].value === "b" && i === 0) {
+            score++;
+          } else if (answers[i].value === "b" && i === 1) {
+            score++;
+          } else if (answers[i].value === "b" && i === 2) {
+            score++;
+          } else if (answers[i].value === "a" && i === 3) {
+            score++;
+          } else if (answers[i].value === "b" && i === 4) {
+            score++;
+          }
+        }
+        // Muestra el resultado
+        var resultContainer = document.getElementById("result");
+        resultContainer.innerHTML =
+          "<p>Has obtenido " + score + " de 5 respuestas correctas.</p>";
+      }
+    </script>
+  </body>
+</html>

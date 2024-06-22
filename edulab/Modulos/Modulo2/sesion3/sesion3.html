@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualización de PDF</title>
+    <link rel="stylesheet" href="/edulab/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      .sidebar_sesion {
+        width: 30%;
+        padding-top: 8%;
+      }
+      .main-content_sesion {
+        width: 80%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .nav_sesion button {
+        width: 100%;
+        margin-left: -9%;
+        background-color: #2e55d6 !important;
+        color: black;
+        margin-bottom: 10px;
+        padding: 4% 0%;
+        font-weight: 700;
+        border: 0px;
+        box-shadow: 1px 1px 10px 1px black;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+      iframe {
+        width: 90%;
+        height: 76vh;
+      }
+      .countdown-container h1 {
+        font-size: 20px;
+      }
+      #siguienteSesionBtn.disabled {
+        background-color: rgb(190, 190, 190) !important;
+        pointer-events: none;
+      }
+      /* Estilos para el modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        font-size: 15px;
+        text-align: center;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor_sesion">
+      <div class="main-header">
+        <div class="container">
+          <div class="logo-wrap" itemprop="logo">
+            <img src="/edulab/images/Logo.png" alt="Logo Image" />
+          </div>
+          <div class="nav-wrap">
+            <nav class="nav-desktop">
+              <ul class="menu-list">
+                <li><a href="/edulab/index.html" id="Home">Home</a></li>
+                <li class="menu-parent">
+                  Cursos
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="/edulab/Modulos/Modulo1/primerCurso1.html"
+                        >Curso 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/edulab/Modulos/Modulo2/segundoModulo.html"
+                        >Curso 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/edulab/Modulos/Modulo3/tercerModulo.html"
+                        >Curso 3</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">Contact</a></li>
+                <button><a href="/edulab/index.html">Matricularse</a></button>
+                <button><a href="/index.html">Salir</a></button>
+              </ul>
+            </nav>
+            <div id="bar">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div id="close">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container_sesion">
+        <main class="main-content_sesion">
+          <p>
+            <a href="/edulab/Modulos/Modulo2/segundoModulo.html">INICIO / </a
+            >SESIÓN 03: FUENTES DE INGRESO
+          </p>
+          <iframe id="pdfViewer" src="" width="100%" height="100%"></iframe>
+        </main>
+        <aside class="sidebar_sesion">
+          <nav class="nav_sesion">
+            <div class="countdown-container">
+              <h1>Tiene para estudiar</h1>
+              <div id="countdown">
+                <div><span id="hours">0</span> Horas</div>
+                <div><span id="minutes">0</span> Minutos</div>
+                <div><span id="seconds">0</span> Segundos</div>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#"
+                  ><button id="siguienteSesionBtn" class="disabled">
+                    Siguiente sesión
+                  </button></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            Su tiempo de estudio para esta sesión ha finalizado. Por favor,
+            continúe con la siguiente sesión.
+          </p>
+        </div>
+      </div>
+      <footer class="footer2">
+        <div class="footer-second-section">
+          <hr class="footer-line" />
+          <ul class="social-list">
+            <li>
+              <a href=""><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-skype"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+          <hr class="footer-line" />
+        </div>
+        <div class="footer-last-section">
+          <div class="container">
+            <p>Copyright 2024 &copy; educacionfinancioera@gmail.com</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="sesion3.js"></script>
+  </body>
+</html>

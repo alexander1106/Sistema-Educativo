@@ -1,45 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Mostrar modal de ingreso de token
-  document.getElementById("code-modal").style.display = "flex";
+document.addEventListener('DOMContentLoaded', function() {
+  // Crear un objeto URLSearchParams basado en la URL actual
+  var params = new URLSearchParams(window.location.search);
 
-  // Manejar envío del token
-  document.getElementById("code-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const token = document.getElementById("token").value;
+  // Obtener el valor del parámetro 'token'
+  var tokenValor = params.get('token');
 
-    // Aquí deberías enviar el token al servidor para verificarlo
-    // Simulación básica de verificación
-    if (token === "123456") {
-      document.getElementById("reset-token").value = token;
-      document.getElementById("code-modal").style.display = "none";
-      document.getElementById("reset-password-modal").style.display = "flex";
-    } else {
-      alert("Token incorrecto. Inténtalo de nuevo.");
-    }
-
-    document.getElementById("code-form").reset();
-  });
-
-  // Manejar restablecimiento de contraseña
-  document.getElementById("reset-password-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const newPassword = document.getElementById("new-password").value;
-    const resetToken = document.getElementById("reset-token").value;
-
-    // Aquí deberías enviar newPassword y resetToken al servidor para actualizar la contraseña
-    // Simulación básica de restablecimiento
-    alert(`Contraseña restablecida con éxito.\nNueva contraseña: ${newPassword}\nToken utilizado: ${resetToken}`);
-
-    // Cerrar modal después de restablecer la contraseña
-    document.getElementById("reset-password-modal").style.display = "none";
-    document.getElementById("reset-password-form").reset();
-  });
-
-  // Cerrar ventanas modales al hacer clic en el botón de cerrar
-  document.querySelectorAll(".close-button").forEach(function (button) {
-    button.addEventListener("click", function () {
-      document.getElementById("code-modal").style.display = "none";
-      document.getElementById("reset-password-modal").style.display = "none";
-    });
-  });
+  // Asignar el valor obtenido al campo oculto
+  document.getElementById('tokenInput').value = tokenValor;
 });
+
+function validateFormToken() {
+  const loginFormRec = document.getElementById('reset-password-form');
+  //document.getElementById('tokenInput').value = token;
+  // Crear un objeto FormData y convertirlo en un objeto normal
+  const formData = new FormData(loginFormRec);
+  const data = Object.fromEntries(formData.entries());
+  console.log(data)
+  // Enviar la solicitud POST
+  fetch('http://192.168.1.58:3010/api/auth/changePassword?password='+data.password + '&token='+data.token, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Failed to reset password');
+    }
+  })
+  .then(result => {
+    console.log('Success:', result);
+    if (result.data === null) {
+      alert('Inserte nueva contraseña');
+    } else {
+      // Redireccionar a index.html cuando el proceso de reseteo de contraseña sea exitoso
+      //window.location.href = 'index.html';
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Manejar errores como 400 Bad Request u otros errores de red aquí
+    alert('Error al restablecer la contraseña. Por favor, inténtelo de nuevo.');
+  });
+
+  // Prevenir el comportamiento predeterminado del formulario
+  return false;
+}
