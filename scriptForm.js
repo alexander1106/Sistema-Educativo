@@ -1,27 +1,66 @@
 // Example users database
 const users = [];
 
-
 document.getElementById("register-button").addEventListener("click", function () {
   document.getElementById("login-container").style.display = "none";
   document.getElementById("register-container").style.display = "block";
 });
 
-document.getElementById("register-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById("lastname").value;
-  const email = document.getElementById("email").value;
-  const username = document.getElementById("new-username").value;
-  const password = document.getElementById("new-password").value;
+function validateRegisterForm() {
+  const registerForm = document.getElementById('register-form');
+  
+  // Obtener valores de los campos del formulario
+  const firstname = document.getElementById('firstname').value;
+  const lastname = document.getElementById('lastname').value;
+  const email = document.getElementById('email').value;
+  const username = document.getElementById('new-username').value;
+  const password = document.getElementById('new-password').value;
+  const tipoUsuario = document.getElementById('new-tip-usuario').value;
 
-  users.push({ firstname, lastname, email, username, password });
-  alert("Registro exitoso");
+  // Validar que los campos requeridos no estén vacíos
+  if (!firstname || !lastname || !email || !username || !password || !tipoUsuario) {
+    alert('Por favor completa todos los campos.');
+    return false;
+  }
 
-  document.getElementById("register-container").style.display = "none";
-  document.getElementById("login-container").style.display = "block";
-  document.getElementById("register-form").reset();
-});
+  // Crear objeto con los datos del usuario
+  const userData = {
+    nombre: firstname,
+    apellido: lastname,
+    correo: email,
+    usuario: username,
+    clave: password,
+    tipoUsuario: tipoUsuario
+  };
+
+  // Simular una solicitud POST al servidor
+  fetch('http://api.bluetabdemo.site/api/usuarios', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error al registrar usuario: ' + response.status + ' ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Registro exitoso:', data);
+    alert('Registro exitoso');
+    registerForm.reset(); // Limpiar el formulario después de registrar
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+    alert('Error al registrar usuario: ' + error.message);
+  });
+
+  // Prevenir el envío del formulario por defecto
+  return false;
+}
+
 
 document.getElementById("forgot-password").addEventListener("click", function (event) {
   event.preventDefault();
@@ -37,7 +76,7 @@ function validateFormRecuperar() {
   const data = Object.fromEntries(formData.entries());
   console.log(data.email)
   // Enviar la solicitud POST
-  fetch('http://192.168.1.58:3010/api/auth/reset?email='+data.email, {
+  fetch('http://modulos.bluetabdemo.site/api/auth/reset?email='+data.email, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -78,7 +117,7 @@ function validateForm() {
   const data = Object.fromEntries(formData.entries());
 
   // Enviar la solicitud POST
-  fetch('http://192.168.1.58:3010/api/login', {
+  fetch('http://api.bluetabdemo.site/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -95,7 +134,8 @@ function validateForm() {
   .then(result => {
     console.log('Success:', (result.data));
     if (result.data === null) {
-      alert('Error Clave incorrecta')
+
+      alert('Error clave incorrecta')
     }else{
       window.location.href = '/edulab/index.html';
     }

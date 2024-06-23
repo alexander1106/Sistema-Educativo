@@ -51,12 +51,12 @@
 
     <div id="register-container" style="display: none">
       <h2>Registro</h2>
-      <form id="register-form">
+      <form id="register-form" onsubmit="return validateRegisterForm()">
         <input
           type="text"
           placeholder="Nombre"
           id="firstname"
-          name="firstname"
+          name="nombre"
           required
         />
 
@@ -64,7 +64,7 @@
           type="text"
           placeholder="Apellidos"
           id="lastname"
-          name="lastname"
+          name="apellido"
           required
         />
 
@@ -72,23 +72,34 @@
           type="email"
           placeholder="Correo"
           id="email"
-          name="email"
+          name="correo"
           required
         />
+
         <input
           type="text"
           placeholder="Usuario"
           id="new-username"
-          name="new-username"
+          name="usuario"
           required
         />
+
         <input
           type="password"
           placeholder="Contraseña"
           id="new-password"
-          name="new-password"
+          name="clave"
           required
         />
+
+        <input
+          type="text"
+          placeholder="Tipo de usuario"
+          id="new-tip-usuario"
+          name="tipoUsuario"
+          required
+        />
+
         <button type="submit">Registrarse</button>
       </form>
     </div>
