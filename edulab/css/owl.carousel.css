@@ -13,7 +13,7 @@
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1; }
-  .owl-carousel .owl-stage {
+  .owl-carousel  {
     position: relative;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;

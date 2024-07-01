@@ -140,10 +140,11 @@
             </div>
             <div class="course-container">
               <button
+                id="matriculamodulo1"
                 class="enroll-button"
                 data-url="/edulab/Modulos/Modulo1/primerCurso1.html"
               >
-                Matricularse
+                Matricularse 
               </button>
             </div>
           </div>
@@ -162,6 +163,7 @@
             </div>
             <div class="course-container">
               <button
+                id="matriculamodulo2"
                 class="enroll-button"
                 data-url="/edulab/Modulos/Modulo2/segundoModulo.html"
               >
@@ -183,6 +185,8 @@
             </div>
             <div class="course-container">
               <button
+              id="matriculamodulo3"
+
                 class="enroll-button"
                 data-url="/edulab/Modulos/Modulo3/tercerCurso3.html"
               >
@@ -194,19 +198,47 @@
       </div>
     </section>
     <!-- Modal Structure -->
-    <div id="enrollModal" class="modal">
+    <div id="enrollModal1" class="modal" >
       <div class="modal-content">
         <p>¿Seguro que quieres inscribirte?</p>
-        <button id="confirmEnroll" class="modal-button">Sí</button>
-        <button id="cancelEnroll" class="modal-button">No</button>
+        <button id="confirmEnroll1" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="cancelEnroll1" class="modal-button"> No</button>
+      </div>
+    </div>
+    <div id="enrollModal2" class="modal" >
+      <div class="modal-content">
+        <p>¿Seguro que quieres inscribirte?</p>
+        <button id="confirmEnroll2" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="cancelEnroll2" class="modal-button"> No</button>
+      </div>
+    </div>
+    <div id="enrollModal3" class="modal" >
+      <div class="modal-content">
+        <p>¿Seguro que quieres inscribirte?</p>
+        <button id="confirmEnroll3" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="cancelEnroll3" class="modal-button ">No</button>
+       
       </div>
     </div>
 
     <!-- Success Modal Structure -->
-    <div id="successModal" class="modal">
+    <div id="successModal1" class="modal" >
+      <div class="modal-content">
+        <p>Su matrícula ha sido exitosa</p><a href="/edulab/Modulos/Modulo1/primerCurso1.html">
+        <button id="closeSuccess1" class="modal-button">Ok</button></a>
+      </div>
+    </div>
+    <div id="successModal2" class="modal" >
       <div class="modal-content">
         <p>Su matrícula ha sido exitosa</p>
-        <button id="closeSuccess" class="modal-button">Ok</button>
+        <a href="/edulab/Modulos/Modulo2/segundoModulo.html">
+        <button id="closeSuccess2" class="modal-button">OK</button></a>
+      </div>
+    </div>
+    <div id="successModal3" class="modal" >
+      <div class="modal-content">
+        <p>Su matrícula ha sido exitosa</p> <a href="/edulab/Modulos/Modulo3/tercerModulo.html">
+        <button id="closeSuccess3" class="modal-button"> Ok </button></a>
       </div>
     </div>
     <footer class="footer">
@@ -239,42 +271,62 @@
       </div>
     </footer>
 
+    <script>
+      // Función para manejar la matrícula y éxito
+      function setupModal(enrollButton, enrollModal, successModal, confirmButton, cancelButton, closeButton) {
+        enrollButton.addEventListener('click', function() {
+          enrollModal.style.display = 'block';
+        });
+    
+        cancelButton.addEventListener('click', function() {
+          enrollModal.style.display = 'none';
+        });
+    
+        confirmButton.addEventListener('click', function() {
+          enrollModal.style.display = 'none';
+          successModal.style.display = 'block';
+        });
+    
+        closeButton.addEventListener('click', function() {
+          successModal.style.display = 'none';
+        });
+      }
+    
+      // Configurar para el primer conjunto de elementos
+      setupModal(
+        document.getElementById('matriculamodulo1'),
+        document.getElementById('enrollModal1'),
+        document.getElementById('successModal1'),
+        document.getElementById('confirmEnroll1'),
+        document.getElementById('cancelEnroll1'),
+        document.getElementById('closeSuccess1')
+      );
+    
+      // Configurar para el segundo conjunto de elementos
+      setupModal(
+        document.getElementById('matriculamodulo2'),
+        document.getElementById('enrollModal2'),
+        document.getElementById('successModal2'),
+        document.getElementById('confirmEnroll2'),
+        document.getElementById('cancelEnroll2'),
+        document.getElementById('closeSuccess2')
+      );
+    
+      // Configurar para el tercer conjunto de elementos
+      setupModal(
+        document.getElementById('matriculamodulo3'),
+        document.getElementById('enrollModal3'),
+        document.getElementById('successModal3'),
+        document.getElementById('confirmEnroll3'),
+        document.getElementById('cancelEnroll3'),
+        document.getElementById('closeSuccess3')
+      );
+    </script>
+    
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        let enrollUrl = "";
-
-        $(".enroll-button").click(function () {
-          enrollUrl = $(this).data("url");
-          $(".overlay").show(); // Mostrar el overlay
-          $("#enrollModal").show(); // Mostrar el modal de confirmación
-        });
-
-        $("#confirmEnroll").click(function () {
-          $("#enrollModal").hide(); // Ocultar el modal de confirmación
-          $("#successModal").show(); // Mostrar el modal de éxito
-        });
-
-        $("#closeSuccess").click(function () {
-          $(".overlay").hide(); // Ocultar el overlay
-          $("#successModal").hide(); // Ocultar el modal de éxito
-          window.location.href = enrollUrl;
-        });
-
-        $("#cancelEnroll").click(function () {
-          $(".overlay").hide(); // Ocultar el overlay
-          $("#enrollModal").hide(); // Ocultar el modal de confirmación
-        });
-
-        // Ocultar el modal y el overlay al hacer clic en el fondo
-        $(".overlay").click(function () {
-          $(this).hide();
-          $("#enrollModal").hide();
-          $("#successModal").hide();
-        });
-      });
-    </script>
+    <script src="matricula.js"></script>
+    
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/all.js"></script>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>

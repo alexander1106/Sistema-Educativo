@@ -9,7 +9,7 @@ html {
 body {
 	margin: 0;
 	background: #fff;
-
+	width: 100%;
 }
 
 a {
@@ -30,9 +30,6 @@ pre {
 }
 
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
@@ -70,6 +67,7 @@ textarea {
 
 .social-block {
 	margin-right: 8.5rem;
+	background-color: aqua !important;
 }
 .social-block a:hover{
 	color: #040404;
@@ -304,7 +302,39 @@ ul > li {
 .latest-news{
 	width: 90%;
 	margin:auto;
+	overflow: hidden;
 	padding: 20px 0px;
+}
+
+.news-wrap {
+	position: relative;
+	width: 96%;
+	padding: 0px 30px;
+	margin-right:20px;
+	margin-left:-10px;
+	font-family: arial;
+}
+
+.news-detail h1{
+	font-size: 22px;
+}
+.news-detail {
+	width: 86%;
+	padding: 0em 2em;
+	border: 1px solid #adadad;
+	box-sizing: border-box;
+	position: absolute;
+	background-color: #ffffff;
+	margin-top:40px;
+	margin-bottom: 20px;
+	height: 17vh;
+	top: 63%;
+	left: 6%;
+	/*background: #fff;*/
+}
+.news-detail p{
+	font-size: 15px;
+	margin-top:-10px;
 }
 
 
@@ -451,37 +481,6 @@ ul > li {
 }
 
 /*===Latest New =================*/
-
-.news-wrap {
-	position: relative;
-	width: 95%;
-	padding: 0px 30px;
-	margin-right:20px;
-	margin-left:-10px;
-	font-family: arial;
-}
-
-.news-detail h1{
-	font-size: 22px;
-}
-.news-detail {
-	width: 86%;
-	padding: 0em 2em;
-	border: 1px solid #adadad;
-	box-sizing: border-box;
-	position: absolute;
-	background-color: #ffffff;
-	margin-top:40px;
-	margin-bottom: 20px;
-	height: 17vh;
-	top: 63%;
-	left: 6%;
-	/*background: #fff;*/
-}
-.news-detail p{
-	font-size: 15px;
-	margin-top:-10px;
-}
 
 
 
@@ -1525,129 +1524,12 @@ footer{
 RESPONSIVE STYLESHEET
 ===========================*/
 
-@media screen and (max-width: 1099px) {
-	.container {
-		max-width: 1000px;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.top-header{
-		background-color: #12a84e;
-		display: none;
-	}
-
-	.learn-desining-banner {
-		left: 15%;
-		top: 53% !important;
-		/*background: #009450;*/
-		padding: 0.9375em 2em 1em 2em;
-		font-size: 20px;
-	}
-
-	
-	/*====UPcomming Event====*/
-	.event-wrap .details {
-	width: 70%;
-	padding: 1em;
-	top: 3%;
-	}
-	
-	/*===What Other Say*/
-	.what-other-say .container {
-	padding: 4.375em 1em;
-	}
-
-	/*=====Lates New Section====*/
-	.news-detail {
-		top: 47%;
-	}
-
-	.latest-news .container .owl-carousel .owl-nav {
-		margin-top: 0;
-	}
-	
-	.page-content .container {
-		flex-flow: column wrap;
-	}
-
-	.page-content .container .grid-container{
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	.page-content .container aside {
-		width: 371px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.page-content .latest-course {
-		margin-bottom: 4em;
-	}
-
-	/*=====================================
-		Blog Edu Single
-	======================================*/
-	.page-content .page-article {
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	.page-content .comment-form {
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	.team-members .developer-grid {
-		grid-template-columns: repeat(3, 1fr);
-		width: 870px;
-		margin-left: auto;
-		margin-right: auto;
-	}
 
 
-	.course-listing-page .button-group::after, 
-	.gallery-section2 .button-group::after{
-		left: 23%;
-	}
-
-	.course-listing-page .grid {
-		justify-content: space-around;
-	}
-
-	/*=====================================
-		Course Single Page
-	======================================*/
-	#course-page .course-detail, .testimonial-page .customer-review {
-		width: 77%;
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	#course-page .container {
-		padding-bottom: 1.25em;
-	}
-
-	#course-page aside, .testimonial-page aside {
-		margin-top: 4em;
-	}
-
-	.recent-course-single .grid {
-		justify-content: space-around;
-	}
-
-	.testimonial-page aside, .testimonial-page .submit-testimonials {
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
 	.container {
 		max-width: 800px;
 	}
-
 	.top-header .top-header-left {
 		margin-left: auto;
 		margin-right: auto;
@@ -1663,6 +1545,7 @@ RESPONSIVE STYLESHEET
 		margin-right: auto;
 	}
 
+
 	.top-header-right .social-block {
 		margin-right: 3em;
 	}
@@ -1676,6 +1559,9 @@ RESPONSIVE STYLESHEET
 	.nav-desktop {
 		display: none;
 		width: 250px;
+	}
+	.owl-nav{
+		margin-left: 15%;
 	}
 
 	.owl-four owl-carousel{
@@ -1731,7 +1617,10 @@ RESPONSIVE STYLESHEET
 
 	/*========Banner section====*/
 	.banner .container .h1 {
-		margin-top: 1em;
+		font-size: 50px !important;
+	}
+	.banner .container h3{
+		font-size: 18px !important;
 	}
 
 	/*=====Popular Courses====*/
@@ -1777,21 +1666,33 @@ RESPONSIVE STYLESHEET
 
 	/*=====Lates New Section====*/
 	.news-detail {
-		top: 35%;
+		top: 80% !important;
+		width: 84%;
+		margin: auto;
+		margin-left: 10px;
+	}
+	.news-detail h1{
+		font-size:17px;
+	}
+	.news-detail p{
+		font-size: 12px;
+		padding-bottom: 20px;
+	}
+	.course-container button{
+		margin-top: 10px;
+		width: 35%;
+		margin-left:-30px;
 	}
 
-
-	/*===================================
-		Blog Page
-	=====================================*/
-
-	.page-content .container .grid-container{
-		grid-gap: 10px;
+	.latest-news{
+		width: 89% !important;
+		padding:30px  !important;
+	}
+	.news-wrap{
+		width: 95% !important;
+		margin-right: 20px !important;
 	}
 
-	/*=====================================
-		Contact Page
-	======================================*/
 
 	.contact-page-section .people-info-wrap{
 		margin-right: auto;
@@ -1804,9 +1705,6 @@ RESPONSIVE STYLESHEET
 		margin-right: auto;
 	}
 
-	/*=====================================
-		About Page
-	======================================*/
 
 	.about-upper-section .who-we-are {
 		margin-left: auto;
@@ -1850,7 +1748,26 @@ RESPONSIVE STYLESHEET
 	
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
+	.container {
+		max-width: 750px;
+	}
+	.banner .container h1{
+		font-size: 20px !important;
+		margin-top:-25px !important;
+	}
+	.banner .container h3 {
+		font-size: 11px;
+		margin-top:-20px !important;
+
+	}
+
+	.latest-news {
+		width:90% !important;
+	}
+	.news-wrap{
+		width: 90% !important;
+	}
 	.contenedor1{
 		display: block;
 		width: 90%;
@@ -1881,7 +1798,13 @@ RESPONSIVE STYLESHEET
 		width: 100%;
 		height: 8vh;
 	}
-	
+	.course-container{
+		width:60%;
+	}
+	.course-container button{
+		margin-top: 10px;
+		width: 50%;
+	}
 	.titulo-curso1{
 		margin-top: 20px;
 		margin-left: 30px;
@@ -1894,18 +1817,9 @@ RESPONSIVE STYLESHEET
 	.banner img{
 		height:300px;
 		opacity:70%;
-
 	}
 	.owl-four owl-carousel img{opacity: 90%;}
 	
-
-	.site-header .top-header .container {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		grid-row-gap: 1em;
-		font-size: 20px;
-	}
-
 	.top-header .top-header-left {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
@@ -1928,11 +1842,6 @@ RESPONSIVE STYLESHEET
 		margin-right: auto;
 		margin-left: auto;
 		margin-bottom: 1em;
-	}
-
-
-	.banner .container h3 {
-		font-size: 14px;
 	}
 
 	/*====Popular Courses======*/
@@ -1974,33 +1883,16 @@ RESPONSIVE STYLESHEET
 		width: 100%;
 	}
 
-
-
 	.page-content .container .grid-container{
 		grid-template-columns: repeat(1,1fr);
 		grid-gap: 30px;
 	}
 
-	/*=====================================
-		Contact Page
-	======================================*/
-
-	.contact-page-section .people-info-wrap form span{
-		flex-flow: column wrap;
-	}
-
-	.contact-page-section .people-info-wrap form span .name,
-	 .contact-page-section .people-info-wrap form span .email {
-	 	width: 100%;
-	 }
-
-	.contact-page-section .people-info-wrap form span .name {
-		margin-bottom: 0.9375em;
-	}
+	
  }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
 	.container {
 		max-width: 300px;
 	}
@@ -2024,7 +1916,6 @@ RESPONSIVE STYLESHEET
 	}
 
 	.banner .container h1 {
-
 		font-size: 3rem;
 		margin-top: 0.5em;
 		width: 80vw;

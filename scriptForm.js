@@ -70,13 +70,14 @@ document.getElementById("forgot-password").addEventListener("click", function (e
 
 function validateFormRecuperar() {
   const loginFormRec = document.getElementById('forgot-password-form');
-  
+
   // Crear un objeto FormData y convertirlo en un objeto normal
   const formData = new FormData(loginFormRec);
   const data = Object.fromEntries(formData.entries());
-  console.log(data.email)
+  console.log(data.email);
+
   // Enviar la solicitud POST
-  fetch('http://modulos.bluetabdemo.site/api/auth/reset?email='+data.email, {
+  fetch('http://api.bluetabdemo.site/api/auth/reset?email=' + data.email, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -84,24 +85,27 @@ function validateFormRecuperar() {
     body: JSON.stringify(data)
   })
   .then(response => {
-    if (response.status === 400) {
+    if (response.ok) {
       return response.json();
+    } else if (response.status === 400) {
+      return response.json().then(result => { throw new Error(result.message || 'Correo incorrecto'); });
     } else {
-      throw new Error('Failed to login');
+      throw new Error('Failed to reset password');
     }
   })
   .then(result => {
-    console.log('Success:', (result.data));
+    console.log('Success:', result);
     if (result.data === null) {
-      alert('Error correo incorrecta')
-    }else{
-      alert("Se envio un mensjae a sus correo")
+      alert('Se envió un mensaje a su correo');
+
+    } else {
+      alert('Error correo incorrecto');
+
     }
-    // Redirigir a otra página
-    //
   })
   .catch(error => {
     console.error('Error:', error);
+    alert(error.message || 'Error al procesar la solicitud');
   });
 
   // Prevenir el comportamiento predeterminado del formulario
@@ -132,22 +136,34 @@ function validateForm() {
     }
   })
   .then(result => {
-    console.log('Success:', (result.data));
-    if (result.data === null) {
+    console.log('Success:', result.data);
 
-      alert('Error clave incorrecta')
-    }else{
-      window.location.href = '/edulab/index.html';
-    }
-    // Redirigir a otra página
-    //
+    // Guardar datos en localStorage si la autenticación es exitosa
+    const nombre = result.data.nombre; // Suponiendo que 'nombre' es un campo devuelto por la API
+    const apellidos = result.data.apellidos; // Suponiendo que 'apellidos' es un campo devuelto por la API
+    const idUsuario = result.data.idUsuario; // Suponiendo que 'idUsuario' es un campo devuelto por la API
+
+    localStorage.setItem('nombre', nombre);
+    localStorage.setItem('apellidos', apellidos);
+    localStorage.setItem('idUsuario', idUsuario);
+
+    // Redirigir a otra página si es necesario
+    // window.location.href = '/edulab/index.html';
+
+    // Mostrar los valores guardados en la consola para verificar
+    console.log('Nombre:', nombre);
+    console.log('Apellidos:', apellidos);
+    console.log('ID de Usuario:', idUsuario);
+
   })
   .catch(error => {
     console.error('Error:', error);
+    alert('Error al iniciar sesión');
   });
 
   // Prevenir el comportamiento predeterminado del formulario
   return false;
 }
+
 
 
