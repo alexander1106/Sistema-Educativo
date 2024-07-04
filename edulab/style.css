@@ -2076,8 +2076,11 @@ RESPONSIVE STYLESHEET
 	.news-wrap{
 		margin-left:-30px !important;
 		width:95% !important;
+		
 	}
-
+	.news-wrap img{
+		height: 40vh !important;
+	}
 	.latest-news{
 		width:89% !important;
 		padding-right: 0px !important;
@@ -2093,7 +2096,7 @@ RESPONSIVE STYLESHEET
 		margin-bottom: 200px !important;
 	}
 	.course-container .enroll-button{
-		margin-top:0px !important;
+		margin-top:20px !important;
 	}
 	.social-list{
 		margin-left: 30%!important;
