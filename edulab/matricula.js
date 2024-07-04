@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hideSuccessModal(successModal3);
   });
 });
-alert(localStorage.getItem('idUsuario'))
 function salir(){
   window.location.href = 'index.html'; 
 

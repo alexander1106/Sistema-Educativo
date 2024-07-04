@@ -1980,7 +1980,6 @@ RESPONSIVE STYLESHEET
 		width: 88%;
 		margin-left:-70px;		
 	}
-	
 
 	.top-header-right .social-list li:nth-last-child(n+3){
 		margin-bottom: 30px;
@@ -2066,17 +2065,39 @@ RESPONSIVE STYLESHEET
 @media screen and (max-width: 459px) {
 	body{
 		width: 100%;
-		background-color:red;
+		padding: 0px !important;
 		padding:-40px;
-		overflow: hidden;
+	}
+
+	.main-header{
+		width: 100%;
+
+	}
+	.news-wrap{
+		margin-left:-30px !important;
+		width:95% !important;
+	}
+
+	.latest-news{
+		width:89% !important;
+		padding-right: 0px !important;
+		margin:0px !important;
+		height:70vh !important;
+		margin-bottom:59% !important;
+		padding-bottom: 50px !important;
 	}
 	.owl-nav{
 		width: 80%;
 		margin-top:-130px !important;
+		margin-left:18% !important;
 		margin-bottom: 200px !important;
 	}
 	.course-container .enroll-button{
 		margin-top:0px !important;
+	}
+	.social-list{
+		margin-left: 30%!important;
+		width:100% !important;
 	}
 
 	.footer-second-section{
@@ -2086,18 +2107,24 @@ RESPONSIVE STYLESHEET
 		width: 100%;
 	}
 	.banner .container {
-		background-color:black;
-		width: 80%;
+		width: 100%;
+		margin-top: 50px;
 		margin-left:-80px !important;
 	}
 	.banner .container .h1{
-		background-color:aqua;
-		margin-left:-30px
-
+		width:100%;
+		color: rgb(16, 37, 59) !important;
+		font-weight:800;
+		margin:auto;
+		font-size:38px !important;
+	}
+	.banner .container h3{
+		display: none;
 	}
 	.footer{
 		width: 100%;
 		margin-top:-200px;
+		text-align: center;
 	}
 
 	.mean-container .mean-nav {
