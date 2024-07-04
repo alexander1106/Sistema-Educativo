@@ -163,7 +163,7 @@ function validateForm() {
   .catch(error => {
     console.error('Error:', error);
     alert('Error al iniciar sesión');
-    window.location.href = '/edulab/index.html'; 
+    window.location.href = 'edulab/index.html'; 
 
     loginForm.reset();
   });
