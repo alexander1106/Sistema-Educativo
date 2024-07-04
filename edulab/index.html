@@ -87,7 +87,7 @@
               </li>
               <li><a href="">Contact</a></li>
               <button><a href="index.html">Matricularse</a></button>
-              <button><a href="/index.html">Salir</a></button>
+              <button onclick="salir()"><a href="/index.html">Salir</a></button>
             </ul>
           </nav>
           <div id="bar">
@@ -186,9 +186,8 @@
             <div class="course-container">
               <button
               id="matriculamodulo3"
-
                 class="enroll-button"
-                data-url="/edulab/Modulos/Modulo3/tercerCurso3.html"
+                data-url="/edulab/Modulos/Modulo3/tercerModulo.html"
               >
                 Matricularse
               </button>
@@ -201,23 +200,22 @@
     <div id="enrollModal1" class="modal" >
       <div class="modal-content">
         <p>¿Seguro que quieres inscribirte?</p>
-        <button id="confirmEnroll1" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="confirmEnroll1" class="modal-button"  onclick="return registroModulo(1)">Sí</button>
         <button id="cancelEnroll1" class="modal-button"> No</button>
       </div>
     </div>
     <div id="enrollModal2" class="modal" >
       <div class="modal-content">
         <p>¿Seguro que quieres inscribirte?</p>
-        <button id="confirmEnroll2" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="confirmEnroll2" class="modal-button"  onclick="return registroModulo(2)">Sí</button>
         <button id="cancelEnroll2" class="modal-button"> No</button>
       </div>
     </div>
     <div id="enrollModal3" class="modal" >
       <div class="modal-content">
         <p>¿Seguro que quieres inscribirte?</p>
-        <button id="confirmEnroll3" class="modal-button"  onsubmit="return registroModulo()">Sí</button>
+        <button id="confirmEnroll3" class="modal-button"  onclick="return registroModulo(3)">Sí</button>
         <button id="cancelEnroll3" class="modal-button ">No</button>
-       
       </div>
     </div>
 
@@ -328,7 +326,9 @@
     <script src="matricula.js"></script>
     
     <script type="text/javascript" src="js/lightbox.js"></script>
+
     <script type="text/javascript" src="js/all.js"></script>
+    
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>

@@ -361,14 +361,6 @@ ul > li {
 }
 
 
-
-
-.whyUs-section .container {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-}
-
 .featured-points {
 	width: 40.17%;
 	padding-top: 6.25em;
@@ -1524,9 +1516,57 @@ footer{
 RESPONSIVE STYLESHEET
 ===========================*/
 
+/*DISEÑO DE LOS MODULOS*/
+.contenedor1 {
+	display: flex;
+	padding: 30px;
+	width: 80%;
+	padding: 2% 8%;
+	color: rgb(0, 0, 0);
+	margin: auto;
+  }
+
+  a:hover {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+  }
+
+  .sesion:hover {
+	transform: scale(1.01);
+  }
+  .sesion {
+	margin: 10px;
+	padding: 30px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	width: 100%;
+	border: 1px solid black;
+	box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.5);
+	background-color: #4aa39a;
+  }
+  .visualizar {
+	width: 70%;
+	margin-right: 40px;
+  }
+  .visualizar img {
+	margin-bottom: 10px;
+	width: 100%;
+	box-shadow: 1px 1px 10px 1px black;
+  }
+
+  .title {
+	font-weight: bold;
+	font-size: 1.8em;
+	color: white;
+  }
+  .details {
+	font-size: 1.2em;
+  }
+
 
 
 @media screen and (max-width: 1200px) {
+	
 	.container {
 		max-width: 800px;
 	}
@@ -1749,8 +1789,63 @@ RESPONSIVE STYLESHEET
 }
 
 @media screen and (max-width: 900px) {
+
+	.primer_group{
+		width: 60%;
+		margin-top: 20px;
+		display: block;
+	}
+	.primer_group_text{
+		width: 110%;
+		margin-left: -10% !important;		
+		height: 18vh !important;
+	}
+	.primer_group_text h1{
+		margin-top: -10px;
+		font-size: 3pc !important;
+		width: 100%;
+		margin-left: -10px;
+		text-align: center;
+	}
+	.primer_group img{
+		width: 100%;
+	}
+
+	.primer_group_text p{
+		display: none;
+	}
 	.container {
 		max-width: 750px;
+	}
+	.visualizar{
+		width: 60%;
+		font-size: 12px;
+		margin-left: 0px;
+		margin: auto;
+		padding-bottom: 10px;
+
+		text-align: center;
+	}
+	.btn-eva{
+		width: 30% !important;
+		padding: 20px;
+		height: 20px !important;
+		border-radius: 9px;
+		float: left;
+		margin-left: 20px;
+	}
+	.curso1{
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.contenedor1{
+		width: 85% !important;
+		display: block;
+		margin: auto;
+	}
+	.sesion{
+		width: 80% !important;
+		margin-left: 20px !important;
 	}
 	.banner .container h1{
 		font-size: 20px !important;
@@ -1844,32 +1939,14 @@ RESPONSIVE STYLESHEET
 		margin-bottom: 1em;
 	}
 
-	/*====Popular Courses======*/
 	.learn-desining-banner {
 		top: 50% !important;
 	}
 
-	/*==Why Us Section========*/
-
-	.whyUs-section .container {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-	}
-
-	.whyUs-section .container .featured-points {
-		width: 100%;
-	}
-
-	.whyUs-section .container .whyus-wrap {
-		width: 100%;
-	}
-
-	/*===Upcomming Events====*/
 	.events-section .event-wrap {
 		margin-left: 10px;
 	}
 
-	/*===What other say============*/
 	.what-other-say .container {
 		padding-left: 0;
 		padding-right: 0;
@@ -1886,9 +1963,7 @@ RESPONSIVE STYLESHEET
 	.page-content .container .grid-container{
 		grid-template-columns: repeat(1,1fr);
 		grid-gap: 30px;
-	}
-
-	
+	}	
  }
 
 
@@ -1988,7 +2063,42 @@ RESPONSIVE STYLESHEET
 	}
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 459px) {
+	body{
+		width: 100%;
+		background-color:red;
+		padding:-40px;
+		overflow: hidden;
+	}
+	.owl-nav{
+		width: 80%;
+		margin-top:-130px !important;
+		margin-bottom: 200px !important;
+	}
+	.course-container .enroll-button{
+		margin-top:0px !important;
+	}
+
+	.footer-second-section{
+		width: 50% !important;
+	}
+	.banner{
+		width: 100%;
+	}
+	.banner .container {
+		background-color:black;
+		width: 80%;
+		margin-left:-80px !important;
+	}
+	.banner .container .h1{
+		background-color:aqua;
+		margin-left:-30px
+
+	}
+	.footer{
+		width: 100%;
+		margin-top:-200px;
+	}
 
 	.mean-container .mean-nav {
 		box-sizing: border-box;

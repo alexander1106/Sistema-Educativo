@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen del modulo Ahorrando para cumplir mis metas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .question h3 {
+        margin-bottom: 10px;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e0ffe0;
+        border: 1px solid #00c000;
+        display: none;
+      }
+      .error {
+        display: none;
+        color: red;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Examen del modulo Ahorrando para cumplir mis metas</h1>
+      <form id="quizForm">
+        <div class="question" id="q1">
+          <h3>
+            1. ¿Por qué es importante usar contraseñas fuertes para tus cuentas
+            en internet?
+          </h3>
+          <label
+            ><input type="radio" name="q1" value="a" /> a) Para que sean fáciles
+            de recordar.</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="b" /> b) Para proteger tus
+            cuentas de accesos no autorizados.</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="c" /> c) Para poder
+            compartirlas fácilmente.</label
+          >
+        </div>
+        <div class="question" id="q2">
+          <h3>2. ¿Qué es la autenticación de dos factores?</h3>
+          <label
+            ><input type="radio" name="q2" value="a" /> a) Un método de
+            autenticación que utiliza solo una contraseña.</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="b" /> b) Un método de
+            seguridad que requiere dos formas de verificación.</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="c" /> c) Un sistema de
+            autenticación basado en preguntas de seguridad.</label
+          >
+        </div>
+        <div class="question" id="q3">
+          <h3>
+            3. ¿Cuál es una práctica segura al crear una nueva cuenta en
+            internet?
+          </h3>
+          <label
+            ><input type="radio" name="q3" value="a" /> a) Usar la misma
+            contraseña para todas tus cuentas.</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="b" /> b) Usar contraseñas
+            diferentes y únicas para cada cuenta.</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="c" /> c) No cambiar nunca tu
+            contraseña.</label
+          >
+        </div>
+        <div class="question" id="q4">
+          <h3>
+            4. ¿Qué debes hacer si sospechas que tu cuenta en internet ha sido
+            comprometida?
+          </h3>
+          <label
+            ><input type="radio" name="q4" value="a" /> a) Ignorar la
+            situación.</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="b" /> b) Cambiar
+            inmediatamente la contraseña y revisar la actividad reciente.</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="c" /> c) Compartir la
+            información de la cuenta con tus amigos.</label
+          >
+        </div>
+        <div class="question" id="q5">
+          <h3>5. ¿Qué es una estafa de phishing?</h3>
+          <label
+            ><input type="radio" name="q5" value="a" /> a) Un tipo de ataque
+            cibernético que intenta obtener información personal a través de
+            correos electrónicos falsos.</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="b" /> b) Un software que
+            protege tu computadora.</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="c" /> c) Un método para
+            mejorar la velocidad de internet.</label
+          >
+        </div>
+        <div class="question" id="q6">
+          <h3>
+            6. ¿Cómo pueden las redes sociales beneficiar a un pequeño negocio?
+          </h3>
+          <label
+            ><input type="radio" name="q6" value="a" /> a) Permitiendo compartir
+            contenido solo con amigos cercanos.</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="b" /> b) Proporcionando una
+            plataforma para llegar a una audiencia más amplia y potenciales
+            clientes.</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="c" /> c) Evitando el contacto
+            con los clientes.</label
+          >
+        </div>
+        <div class="question" id="q7">
+          <h3>7. ¿Qué es una estrategia de marketing en redes sociales?</h3>
+          <label
+            ><input type="radio" name="q7" value="a" /> a) Un plan para gastar
+            menos en publicidad tradicional.</label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="b" /> b) Un plan detallado
+            para promocionar y vender productos o servicios a través de las
+            redes sociales.</label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="c" /> c) Un método para
+            contratar empleados.</label
+          >
+        </div>
+        <div class="question" id="q8">
+          <h3>
+            8. ¿Por qué es importante tener una presencia activa en redes
+            sociales?
+          </h3>
+          <label
+            ><input type="radio" name="q8" value="a" /> a) Para asegurarse de
+            que los clientes nunca te contacten.</label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="b" /> b) Para construir y
+            mantener una relación con tu audiencia y clientes.</label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="c" /> c) Para reducir el
+            número de ventas.</label
+          >
+        </div>
+        <div class="question" id="q9">
+          <h3>9. ¿Qué es el contenido generado por el usuario (UGC)?</h3>
+          <label
+            ><input type="radio" name="q9" value="a" /> a) Contenido creado por
+            empleados de la empresa.</label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="b" /> b) Contenido creado y
+            compartido por los usuarios y clientes de una marca.</label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="c" /> c) Contenido pagado por
+            la empresa.</label
+          >
+        </div>
+        <div class="question" id="q10">
+          <h3>
+            10. ¿Cómo pueden las redes sociales ayudar a mejorar el servicio al
+            cliente?
+          </h3>
+          <label
+            ><input type="radio" name="q10" value="a" /> a) Permitiendo ignorar
+            los comentarios de los clientes.</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="b" /> b) Proporcionando una
+            plataforma para respuestas rápidas y efectivas a las consultas y
+            problemas de los clientes.</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="c" /> c) Evitando el contacto
+            directo con los clientes.</label
+          >
+        </div>
+        <div class="error" id="error">
+          Por favor, responde todas las preguntas antes de evaluar.
+        </div>
+        <button type="button" onclick="evaluateQuiz()">Evaluar</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      const correctAnswers = {
+        q1: "b",
+        q2: "b",
+        q3: "b",
+        q4: "b",
+        q5: "a",
+        q6: "b",
+        q7: "b",
+        q8: "b",
+        q9: "b",
+        q10: "b",
+      };
+
+      function evaluateQuiz() {
+        let form = document.getElementById("quizForm");
+        let resultDiv = document.getElementById("result");
+        let errorDiv = document.getElementById("error");
+        let formData = new FormData(form);
+        let correctCount = 0;
+        let totalQuestions = 10;
+
+        let answeredQuestions = {};
+        for (let [name, value] of formData.entries()) {
+          answeredQuestions[name] = value;
+        }
+
+        if (Object.keys(answeredQuestions).length < totalQuestions) {
+          errorDiv.style.display = "block";
+          resultDiv.style.display = "none";
+        } else {
+          errorDiv.style.display = "none";
+          resultDiv.innerHTML = "";
+          let questionResult = "";
+
+          for (let i = 1; i <= totalQuestions; i++) {
+            let questionName = `q${i}`;
+            let userAnswer = answeredQuestions[questionName];
+            let correctAnswer = correctAnswers[questionName];
+
+            if (userAnswer === correctAnswer) {
+              correctCount++;
+              questionResult += `<p class="correct">Pregunta ${i}: Correcta</p>`;
+            } else {
+              questionResult += `<p class="incorrect">Pregunta ${i}: Incorrecta (Tu respuesta: ${userAnswer}, Respuesta correcta: ${correctAnswer})</p>`;
+            }
+          }
+
+          let incorrectCount = totalQuestions - correctCount;
+          let score = correctCount * 2;
+
+          resultDiv.innerHTML += `<p>Preguntas correctas: ${correctCount}</p>
+                                     <p>Preguntas incorrectas: ${incorrectCount}</p>
+                                     <p>Calificación: ${score}</p>
+                                     ${questionResult}`;
+          resultDiv.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

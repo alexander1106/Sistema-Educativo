@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen sobre Productos y Servicios</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .question h3 {
+        margin-bottom: 10px;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e0ffe0;
+        border: 1px solid #00c000;
+        display: none;
+      }
+      .error {
+        display: none;
+        color: red;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        width: 100px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+      .contenedorBotones {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Examen del modulo Formacion de Emprendedores Innovadores</h1>
+      <form id="quizForm">
+        <div class="question" id="q1">
+          <h3>1. ¿Qué es un producto?</h3>
+          <label
+            ><input type="radio" name="q1" value="a" /> a) Un bien o servicio
+            que se ofrece en el mercado.</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="b" /> b) Una estrategia de
+            marketing.</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="c" /> c) Una forma de
+            pago.</label
+          >
+        </div>
+        <div class="question" id="q2">
+          <h3>2. ¿Qué es un servicio?</h3>
+          <label
+            ><input type="radio" name="q2" value="a" /> a) Un bien
+            tangible.</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="b" /> b) Una actividad que se
+            realiza a cambio de una compensación.</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="c" /> c) Un tipo de producto
+            que puedes tocar.</label
+          >
+        </div>
+        <div class="question" id="q3">
+          <h3>3. ¿Qué es un mercado?</h3>
+          <label
+            ><input type="radio" name="q3" value="a" /> a) Un lugar físico donde
+            se compran y venden bienes y servicios.</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="b" /> b) Una cuenta
+            bancaria.</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="c" /> c) Un tipo de
+            préstamo.</label
+          >
+        </div>
+        <div class="question" id="q4">
+          <h3>4. ¿Qué es el precio de un producto?</h3>
+          <label
+            ><input type="radio" name="q4" value="a" /> a) La cantidad de dinero
+            necesaria para producir el producto.</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="b" /> b) La cantidad de dinero
+            que el cliente paga para adquirir el producto.</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="c" /> c) El costo de las
+            materias primas.</label
+          >
+        </div>
+        <div class="question" id="q5">
+          <h3>5. ¿Qué es una estrategia de marketing?</h3>
+          <label
+            ><input type="radio" name="q5" value="a" /> a) Un plan para fabricar
+            productos.</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="b" /> b) Un plan para
+            promocionar y vender productos o servicios.</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="c" /> c) Un plan para reducir
+            gastos operativos.</label
+          >
+        </div>
+        <div class="question" id="q6">
+          <h3>6. ¿Qué es la segmentación de mercado?</h3>
+          <label
+            ><input type="radio" name="q6" value="a" /> a) Dividir un mercado en
+            grupos más pequeños con características similares.</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="b" /> b) Una técnica para
+            aumentar la producción.</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="c" /> c) Un método para
+            reducir costos de fabricación.</label
+          >
+        </div>
+        <div class="question" id="q7">
+          <h3>7. ¿Qué es el ciclo de vida de un producto?</h3>
+          <label
+            ><input type="radio" name="q7" value="a" /> a) La duración del uso
+            de un producto por parte de un cliente.</label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="b" /> b) Las etapas por las
+            que pasa un producto desde su desarrollo hasta su retirada del
+            mercado.</label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="c" /> c) El proceso de
+            reciclaje de productos viejos.</label
+          >
+        </div>
+        <div class="question" id="q8">
+          <h3>8. ¿Qué es la satisfacción del cliente?</h3>
+          <label
+            ><input type="radio" name="q8" value="a" /> a) El grado en que un
+            producto cumple las expectativas del cliente.</label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="b" /> b) La cantidad de
+            productos vendidos en un mes.</label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="c" /> c) El costo de la
+            publicidad.</label
+          >
+        </div>
+        <div class="question" id="q9">
+          <h3>9. ¿Qué es una propuesta de valor?</h3>
+          <label
+            ><input type="radio" name="q9" value="a" /> a) Una oferta de
+            descuento en productos.</label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="b" /> b) Una declaración de
+            los beneficios que un cliente recibirá al adquirir un producto o
+            servicio.</label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="c" /> c) Un tipo de estrategia
+            de precios.</label
+          >
+        </div>
+        <div class="question" id="q10">
+          <h3>10. ¿Qué es un canal de distribución?</h3>
+          <label
+            ><input type="radio" name="q10" value="a" /> a) La ruta que toma un
+            producto desde el productor hasta el consumidor final.</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="b" /> b) Un método para fijar
+            precios.</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="c" /> c) Un tipo de inversión
+            en el mercado financiero.</label
+          >
+        </div>
+        <div class="error" id="error">
+          Por favor, responde todas las preguntas antes de evaluar.
+        </div>
+        <div class="contenedorBotones">
+          <button type="button" onclick="evaluateQuiz()">Evaluar</button>
+          <button type="button" onclick="regresarAHtmlEspecifico()">
+            Regresar
+          </button>
+        </div>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      const correctAnswers = {
+        q1: "a",
+        q2: "b",
+        q3: "a",
+        q4: "b",
+        q5: "b",
+        q6: "a",
+        q7: "b",
+        q8: "a",
+        q9: "b",
+        q10: "a",
+      };
+      function regresarAHtmlEspecifico() {
+        // Construir la ruta completa del archivo HTML
+        // Redirigir a la página especificada
+        window.location.href = "/edulab/Modulos/Modulo2/segundoModulo.html";
+      }
+
+      function evaluateQuiz() {
+        let form = document.getElementById("quizForm");
+        let resultDiv = document.getElementById("result");
+        let errorDiv = document.getElementById("error");
+        let formData = new FormData(form);
+        let correctCount = 0;
+        let totalQuestions = 10;
+
+        let answeredQuestions = {};
+        for (let [name, value] of formData.entries()) {
+          answeredQuestions[name] = value;
+        }
+
+        if (Object.keys(answeredQuestions).length < totalQuestions) {
+          errorDiv.style.display = "block";
+          resultDiv.style.display = "none";
+        } else {
+          errorDiv.style.display = "none";
+          resultDiv.innerHTML = "";
+          correctCount = 0;
+          let questionResult = "";
+
+          for (let i = 1; i <= totalQuestions; i++) {
+            let questionName = `q${i}`;
+            let userAnswer = answeredQuestions[questionName];
+            let correctAnswer = correctAnswers[questionName];
+
+            if (userAnswer === correctAnswer) {
+              correctCount++;
+              questionResult += `<p class="correct">Pregunta ${i}: Correcta</p>`;
+            } else {
+              questionResult += `<p class="incorrect">Pregunta ${i}: Incorrecta (Tu respuesta: ${userAnswer}, Respuesta correcta: ${correctAnswer})</p>`;
+            }
+          }
+
+          let incorrectCount = totalQuestions - correctCount;
+          let score = correctCount * 2;
+
+          resultDiv.innerHTML += `<p>Preguntas correctas: ${correctCount}</p>
+                                   <p>Preguntas incorrectas: ${incorrectCount}</p>
+                                   <p>Calificación: ${score}</p>
+                                   ${questionResult}`;
+          resultDiv.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

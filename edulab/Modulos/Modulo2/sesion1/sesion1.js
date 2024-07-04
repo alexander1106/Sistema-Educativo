@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const pdfViewer = document.getElementById('pdfViewer');
     const pdfUrl = 'Sesion 5.pdf';  // Ruta al archivo PDF
 
+
     // Cargar el PDF en el iframe
     pdfViewer.src = pdfUrl;
 
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     countdown(); // Iniciar el contador al cargar la página
 });
-
+document.getElementById("siguienteSesionBtn").disabled=true;
 document.getElementById(".home").addEventListener("click", function() {
     window.location.href = "/edulab/index.html";
 });

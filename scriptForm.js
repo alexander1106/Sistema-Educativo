@@ -15,10 +15,10 @@ function validateRegisterForm() {
   const email = document.getElementById('email').value;
   const username = document.getElementById('new-username').value;
   const password = document.getElementById('new-password').value;
-  const tipoUsuario = document.getElementById('new-tip-usuario').value;
+  const tipoUsuario = '01';
 
   // Validar que los campos requeridos no estén vacíos
-  if (!firstname || !lastname || !email || !username || !password || !tipoUsuario) {
+  if (!firstname || !lastname || !email || !username || !password ) {
     alert('Por favor completa todos los campos.');
     return false;
   }
@@ -51,6 +51,8 @@ function validateRegisterForm() {
     console.log('Registro exitoso:', data);
     alert('Registro exitoso');
     registerForm.reset(); // Limpiar el formulario después de registrar
+    window.location.href = 'index.html'; 
+
   })
   .catch(error => {
     console.error('Error:', error.message);
@@ -154,11 +156,16 @@ function validateForm() {
     console.log('Nombre:', nombre);
     console.log('Apellidos:', apellidos);
     console.log('ID de Usuario:', idUsuario);
+    window.location.href = 'edulab/index.html'; 
+
 
   })
   .catch(error => {
     console.error('Error:', error);
     alert('Error al iniciar sesión');
+    window.location.href = '/edulab/index.html'; 
+
+    loginForm.reset();
   });
 
   // Prevenir el comportamiento predeterminado del formulario

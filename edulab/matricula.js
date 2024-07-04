@@ -80,16 +80,19 @@ document.addEventListener('DOMContentLoaded', function() {
       hideSuccessModal(successModal3);
   });
 });
+alert(localStorage.getItem('idUsuario'))
+function salir(){
+  window.location.href = 'index.html'; 
 
-function registroModulo() {
-  // Obtener un valor de localStorage
+}
+
+function registroModulo(moduloId) {
+  // Obtener el idUsuario desde localStorage o de donde lo obtengas
   const idUsuario = localStorage.getItem('idUsuario');
-  const idModulo = localStorage.getItem('idModulo');
-  console.log(idModulo); // Imprimirá el valor almacenado en 'idModulo'
-
-  // Crear un objeto con los datos del módulo
+  
+  // Crear el objeto con los datos del módulo específico
   const modulo = {
-    idModulo: idModulo,
+    idModulo: moduloId,
     idUsuario: idUsuario,
   };
 
@@ -120,4 +123,3 @@ function registroModulo() {
   // Devolver false para prevenir el envío del formulario por defecto si estás en un formulario HTML
   return false;
 }
-
