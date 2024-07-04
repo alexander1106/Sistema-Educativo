@@ -1563,8 +1563,6 @@ RESPONSIVE STYLESHEET
 	font-size: 1.2em;
   }
 
-
-
 @media screen and (max-width: 1200px) {
 	
 	.container {
@@ -1977,7 +1975,6 @@ RESPONSIVE STYLESHEET
 	}	
  }
 
-
 @media screen and (max-width: 667px) {
 	.container {
 		max-width: 300px;
@@ -2093,7 +2090,7 @@ RESPONSIVE STYLESHEET
 		width:95% !important;
 	}
 	.news-wrap div{
-		height: 45%;
+		height: 42%;
 	}
 	.news-wrap img{
 		height: 35vh !important;
@@ -2214,7 +2211,9 @@ RESPONSIVE STYLESHEET
 	.accept-schedule-button{
 		width: 80% !important;
 	}
-	
+	 .modal-content{
+		margin-top: 40% !important;
+	}
 }
 
 .what-other-say .wrap-others-say #carousel .flex-active-slide {
