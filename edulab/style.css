@@ -1570,6 +1570,10 @@ RESPONSIVE STYLESHEET
 	.container {
 		max-width: 800px;
 	}
+	#close{
+		margin-left: -30px ;
+		margin-top: 20px !important; 
+	}
 	.top-header .top-header-left {
 		margin-left: auto;
 		margin-right: auto;
@@ -1795,6 +1799,13 @@ RESPONSIVE STYLESHEET
 		margin-top: 20px;
 		display: block;
 	}
+	#bar{
+		margin-top: 22px !important;
+	}
+	#close{
+		margin-left: -35px ;
+		margin-top: 10px;
+	}
 	.primer_group_text{
 		width: 110%;
 		margin-left: -10% !important;		
@@ -1967,11 +1978,16 @@ RESPONSIVE STYLESHEET
  }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 667px) {
 	.container {
 		max-width: 300px;
 	}
-
+	#bar{
+		margin-top: 12px !important;
+	}
+	#close{
+		margin-top: 10px;
+	}
 	.top-header-right .social-list li {
 		margin-right: 40px;
 	}
@@ -2070,14 +2086,22 @@ RESPONSIVE STYLESHEET
 
 	.main-header{
 		width: 100%;
-
 	}
+
 	.news-wrap{
 		margin-left:-30px !important;
 		width:95% !important;
 	}
+	.news-wrap div{
+		height: 45%;
+	}
 	.news-wrap img{
 		height: 35vh !important;
+	}
+	#close{
+		margin-top: -20px !important;
+		margin-left: -40px !important;
+
 	}
 	.latest-news{
 		width:89% !important;
