@@ -14,7 +14,7 @@ function toggleNav() {
     }
   }
   function salir() {
-    window.location.href = "../../../index.html";
+    window.location.href = "../../../../index.html";
   }
 document.addEventListener('DOMContentLoaded', function() {
     const pdfViewer = document.getElementById('pdfViewer');
