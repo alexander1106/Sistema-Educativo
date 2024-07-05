@@ -60,7 +60,7 @@
               <li><a href="mailto:Mass1407@hotmail.com">Contact</a></li>
               <button><a href="index.html">Matricularse</a></button>
               <button>
-                <a href="../../../index.html">Salir</a>
+                <button onclick="salir()">Salir</button>
               </button>
             </ul>
           </nav>
@@ -183,6 +183,9 @@
     </div>
 
     <script>
+      function salir() {
+        window.location.href = "../../../index.html";
+      }
       function toggleNav() {
         var bar = document.getElementById("bar");
         var close = document.getElementById("close");
