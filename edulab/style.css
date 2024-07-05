@@ -1565,6 +1565,79 @@ RESPONSIVE STYLESHEET
 	font-size: 1.2em;
   }
 
+/*BIENVENIDO*/
+   
+.sidebar_sesion{
+	width: 30%;
+	padding-top:8%;
+}
+.main-content_sesion{
+	width: 80%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight: 700;
+}
+
+.nav_sesion button{
+	width:100%;
+	margin-left:-9%;
+	background-color: #2e55d6 !important;
+	color: black;
+	margin-bottom: 10px;
+	padding: 4% 0%;
+	font-weight: 700;
+	border: 0px;
+	box-shadow: 1px 1px 10px 1px black;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-radius: 7px;
+	cursor:pointer;
+}
+
+.countdown-container h1{
+	font-size: 20px;
+}
+#siguienteSesionBtn.disabled {
+	background-color: rgb(190, 190, 190) !important;
+	pointer-events: none;
+}
+/* Estilos para el modal */
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); 
+	padding-top: 60px; 
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto; 
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; 
+	font-size: 15px;
+	text-align: center;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
 @media screen and (max-width: 1200px) {
 	
 	.container {
@@ -2287,8 +2360,8 @@ RESPONSIVE STYLESHEET
 		width: 100%;
 	}
 	.main-content_sesion{
-		font-size: 22px  !important;
-		width: 100%;
+		font-size: 17px  !important;
+		width: 80% !important;
 	}
 	.main-content_sesion p{
 		width: 90%;
@@ -2299,7 +2372,12 @@ RESPONSIVE STYLESHEET
 	.nav_sesion{
 		width: 90% ;
 	}
-
+	.countdown-container{
+		width: 90%;
+	}
+	.disabled{
+		margin-left: -20px !important;
+	}
 
 
 }
