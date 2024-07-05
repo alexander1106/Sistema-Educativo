@@ -1639,7 +1639,6 @@ RESPONSIVE STYLESHEET
 
 
 @media screen and (max-width: 1200px) {
-	
 	.container {
 		max-width: 800px;
 	}
@@ -2095,7 +2094,7 @@ RESPONSIVE STYLESHEET
 		font-size: 3rem;
 		margin-top: 0.5em;
 		width: 80vw;
-		margin-left: -40%;
+		margin-left: -50px !important;;
 	}
 
 	.banner .container h3 {
@@ -2170,6 +2169,10 @@ RESPONSIVE STYLESHEET
 		padding: 0px !important;
 	}
 
+	#bar{
+		margin-top: 10px !important;
+		margin-left:-80px !important;
+	}
 	.main-header{
 		width: 100%;
 	}
@@ -2215,6 +2218,10 @@ RESPONSIVE STYLESHEET
 
 	.footer-second-section{
 		width: 50% !important;
+	}
+	.container p{
+		margin:auto;
+		font-size: 12px !important;
 	}
 	.banner{
 		width: 100%;
