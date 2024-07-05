@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Educacion Financiera</title>
+    <title>Formacion de emprendedores innovadores</title>
     <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css/jquery.mmenu.all.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../css/meanmenu.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700"
       rel="stylesheet"
@@ -14,53 +21,60 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
+  <style>
+    @media screen and (max-width: 1100px) {
+      #close {
+        position: absolute;
+        margin-top: -250px !important;
+        margin-left: 200px !important;
+      }
+    }
+  </style>
 
   <body>
-    <!-- Top header Close -->
-    <div class="modulo1">
-      <div class="main-header">
-        <div class="container">
-          <div class="logo-wrap" itemprop="logo">
-            <img src="../../images/Logo.png" alt="Logo Image" />
-          </div>
-          <div class="nav-wrap">
-            <nav class="nav-desktop">
-              <ul class="menu-list">
-                <li><a href="../../index.html" id="Home">Home</a></li>
-                <li class="menu-parent">
-                  Cursos
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="/edulab/Modulos/Modulo1/primerCurso1.html"
-                        >Curso 1</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/edulab/Modulos/Modulo2/segundoModulo.html"
-                        >Curso 2</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/edulab/Modulos/Modulo3/tercerModulo.html"
-                        >Curso 3</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="">Contact</a></li>
-                <button><a href="index.html">Matricularse</a></button>
-                <button><a href="../../../index.html">Salir</a></button>
-              </ul>
-            </nav>
-          </div>
-          <div id="bar">
+    <div class="overlay"></div>
+    <div class="main-header">
+      <div class="container">
+        <div class="logo-wrap" itemprop="logo">
+          <img src="../../images/Logo.png" alt="Logo" />
+          <!-- <h1>Education</h1> -->
+        </div>
+        <div class="nav-wrap">
+          <nav class="nav-desktop">
+            <ul class="menu-list">
+              <li><a href="../../index.html">Home</a></li>
+              <li class="menu-parent">
+                Cursos
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../Modulo1/primerCurso1.html">Curso 1</a>
+                  </li>
+                  <li>
+                    <a href="../Modulo2/segundoModulo.html">Curso 2</a>
+                  </li>
+                  <li>
+                    <a href="../Modulo3/tercerModulo.html">Curso 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">Contact</a></li>
+              <button><a href="index.html">Matricularse</a></button>
+              <button onclick="salir()">
+                <a href="../../../index.html">Salir</a>
+              </button>
+            </ul>
+          </nav>
+          <div id="bar" onclick="toggleNav()">
             <i class="fas fa-bars"></i>
           </div>
-          <div id="close">
+          <div id="close" onclick="toggleNav()" style="display: none">
             <i class="fas fa-times"></i>
           </div>
         </div>
       </div>
+    </div>
+    <!-- Top header Close -->
+    <div class="modulo1">
       <div class="primer_group">
         <div class="primer_group_text">
           <h1 class="titulo-curso1">FORMACION DE EMPRENDEDORES INNOVADORES</h1>
@@ -70,7 +84,7 @@
           </p>
         </div>
         <img
-          src="/edulab/images/segundo_modulo.jpg"
+          src="../../images/segundo_modulo.jpg"
           alt="Imagen del segundo modulo"
         />
       </div>
@@ -96,68 +110,44 @@
         </div>
         <div class="curso1">
           <h2>Sesiones disponibles dentro del curso</h2>
-          <a
-            href="/edulab/Modulos/Modulo2/sesion1/sesion1.html"
-            target="_blank"
-          >
+          <a href="sesion1/sesion1.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 01: CANALES</div>
             </div>
           </a>
 
-          <a
-            href="/edulab/Modulos/Modulo2/sesion2/sesion2.html"
-            target="_blank"
-          >
+          <a href="sesion2/sesion2.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 02: RELACIONES</div>
             </div>
           </a>
 
-          <a
-            href="/edulab/Modulos/Modulo2/sesion3/sesion3.html"
-            target="_blank"
-          >
+          <a href="sesion3/sesion3.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 03: FUENTES DE INGRESO</div>
             </div>
           </a>
-          <a
-            href="/edulab/Modulos/Modulo2/sesion4/sesion4.html"
-            target="_blank"
-          >
+          <a href="sesion4/sesion4.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 04: RECURSOS CLAVE</div>
             </div>
           </a>
-          <a
-            href="/edulab/Modulos/Modulo2/sesion5/sesion5.html"
-            target="_blank"
-          >
+          <a href="sesion5/sesion5.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 05: ACTIVIDADES CLAVES</div>
             </div>
           </a>
-          <a
-            href="/edulab/Modulos/Modulo2/sesion6/sesion6.html"
-            target="_blank"
-          >
+          <a href="sesion6/sesion6.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 06: SOCIOS</div>
             </div>
           </a>
-          <a
-            href="/edulab/Modulos/Modulo2/sesion7/sesion7.html"
-            target="_blank"
-          >
+          <a href="sesion7/sesion7.html" target="_blank">
             <div class="sesion">
               <div class="title">SESIÓN 07: COSTOS</div>
             </div>
           </a>
-          <a
-            href="/edulab/Modulos/Modulo2/ExamenModulo2.html"
-            class="btn-eva"
-            id="btn-eva"
+          <a href="../Modulo2/ExamenModulo2.html" class="btn-eva" id="btn-eva"
             >REALIZAR EVALUACIÓN</a
           >
         </div>
@@ -193,6 +183,22 @@
     </div>
 
     <script>
+      function toggleNav() {
+        var bar = document.getElementById("bar");
+        var close = document.getElementById("close");
+        var navDesktop = document.querySelector(".nav-desktop");
+
+        if (bar.style.display === "none") {
+          bar.style.display = "block";
+          close.style.display = "none";
+          navDesktop.style.display = "none";
+        } else {
+          bar.style.display = "none";
+          close.style.display = "block";
+          navDesktop.style.display = "block";
+        }
+      }
+
       function startCountdown(targetDate, display) {
         const countdown = setInterval(() => {
           const now = new Date().getTime();

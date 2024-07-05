@@ -174,6 +174,22 @@
     </div>
 
     <script>
+      function toggleNav() {
+        var bar = document.getElementById("bar");
+        var close = document.getElementById("close");
+        var navDesktop = document.querySelector(".nav-desktop");
+
+        if (bar.style.display === "none") {
+          bar.style.display = "block";
+          close.style.display = "none";
+          navDesktop.style.display = "none";
+        } else {
+          bar.style.display = "none";
+          close.style.display = "block";
+          navDesktop.style.display = "block";
+        }
+      }
+
       // Función para manejar el menú de navegación móvil
       document.getElementById("bar").addEventListener("click", function () {
         document.getElementById("nav-desktop").classList.remove("hidden");
