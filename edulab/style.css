@@ -2235,6 +2235,7 @@ RESPONSIVE STYLESHEET
 		width:100%;
 		color: rgb(16, 37, 59) !important;
 		font-weight:800;
+		margin-bottom: -20px;
 		margin:auto;
 		font-size:38px !important;
 	}
@@ -2318,6 +2319,9 @@ RESPONSIVE STYLESHEET
 		width: 30px;
 		text-align: center;
 		position: relative;
+	}
+	.primer_group_text{
+		height: 12vh !important;
 	}
 	.course-container {
 		width: 87%;
