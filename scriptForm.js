@@ -1,6 +1,8 @@
 // Example users database
 const users = [];
-
+var modal = document.getElementById('errorModal');
+var showErrorBtn = document.getElementById('showErrorBtn');
+var closeBtn = document.getElementsByClassName('close-btn')[0];
 document.getElementById("register-button").addEventListener("click", function () {
   document.getElementById("login-container").style.display = "none";
   document.getElementById("register-container").style.display = "block";
@@ -162,8 +164,16 @@ function validateForm() {
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('Error al iniciar sesión');
-    window.location.href = 'edulab/index.html'; 
+    modal.style.display = 'block';
+    closeBtn.onclick = function() {
+      modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  }
 
     loginForm.reset();
   });
