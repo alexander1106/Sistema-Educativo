@@ -1,3 +1,21 @@
+function toggleNav() {
+    var bar = document.getElementById("bar");
+    var close = document.getElementById("close");
+    var navDesktop = document.querySelector(".nav-desktop");
+  
+    if (bar.style.display === "none") {
+      bar.style.display = "block";
+      close.style.display = "none";
+      navDesktop.style.display = "none";
+    } else {
+      bar.style.display = "none";
+      close.style.display = "block";
+      navDesktop.style.display = "block";
+    }
+  }
+  function salir() {
+    window.location.href = "../../../../index.html";
+  }
 document.addEventListener('DOMContentLoaded', function() {
     const pdfViewer = document.getElementById('pdfViewer');
     const pdfUrl = 'Sesion 11.pdf';  // Ruta al archivo PDF

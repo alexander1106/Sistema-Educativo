@@ -1,138 +1,93 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <title>Formacion de emprendedores innovadores</title>
+    <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visualización de PDF</title>
-    <link rel="stylesheet" href="/edulab/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../css/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../css/jquery.mmenu.all.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../css/meanmenu.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <style>
-      .sidebar_sesion {
-        width: 30%;
-        padding-top: 8%;
+  </head>
+  <style>
+    @media screen and (max-width: 1100px) {
+      #close {
+        position: absolute;
+        margin-top: -250px !important;
+        margin-left: 200px !important;
       }
       .main-content_sesion {
-        width: 80%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 24px;
-        font-weight: 700;
+        width: 100% !important;
       }
+    }
+  </style>
 
-      .nav_sesion button {
-        width: 100%;
-        margin-left: -9%;
-        background-color: #2e55d6 !important;
-        color: black;
-        margin-bottom: 10px;
-        padding: 4% 0%;
-        font-weight: 700;
-        border: 0px;
-        box-shadow: 1px 1px 10px 1px black;
-        font-size: 12px;
-        text-transform: uppercase;
-        border-radius: 7px;
-        cursor: pointer;
-      }
-      iframe {
-        width: 90%;
-        height: 76vh;
-      }
-      .countdown-container h1 {
-        font-size: 20px;
-      }
-      #siguienteSesionBtn.disabled {
-        background-color: rgb(190, 190, 190) !important;
-        pointer-events: none;
-      }
-      /* Estilos para el modal */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-top: 60px;
-      }
-      .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        font-size: 15px;
-        text-align: center;
-      }
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
-    </style>
-  </head>
   <body>
-    <div class="contenedor_sesion">
-      <div class="main-header">
-        <div class="container">
-          <div class="logo-wrap" itemprop="logo">
-            <img src="/edulab/images/Logo.png" alt="Logo Image" />
+    <div class="overlay"></div>
+    <div class="main-header">
+      <div class="container">
+        <div class="logo-wrap" itemprop="logo">
+          <img src="../../../images/Logo.png" alt="Logo" />
+          <!-- <h1>Education</h1> -->
+        </div>
+        <div class="nav-wrap">
+          <nav class="nav-desktop">
+            <ul class="menu-list">
+              <li><a href="../../../index.html">Home</a></li>
+              <li class="menu-parent">
+                Cursos
+                <ul class="sub-menu">
+                  <li>
+                    <a href="../../Modulo1/primerCurso1.html">Curso 1</a>
+                  </li>
+                  <li>
+                    <a href="../../Modulo2/segundoModulo.html">Curso 2</a>
+                  </li>
+                  <li>
+                    <a href="../../Modulo3/tercerModulo.html">Curso 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="mailto:Mass1407@hotmail.com">Contact</a></li>
+              <button><a href="">Matricularse</a></button>
+              <button onclick="salir()">
+                Salir
+              </button>
+            </ul>
+          </nav>
+          <div id="bar" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
           </div>
-          <div class="nav-wrap">
-            <nav class="nav-desktop">
-              <ul class="menu-list">
-                <li><a href="/edulab/index.html" id="Home">Home</a></li>
-                <li class="menu-parent">
-                  Cursos
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="/edulab/Modulos/Modulo1/primerCurso1.html"
-                        >Curso 1</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/edulab/Modulos/Modulo2/segundoModulo.html"
-                        >Curso 2</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/edulab/Modulos/Modulo3/tercerModulo.html"
-                        >Curso 3</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="">Contact</a></li>
-                <button><a href="/edulab/index.html">Matricularse</a></button>
-                <button><a href="/index.html">Salir</a></button>
-              </ul>
-            </nav>
-            <div id="bar">
-              <i class="fas fa-bars"></i>
-            </div>
-            <div id="close">
-              <i class="fas fa-times"></i>
-            </div>
+          <div id="close" onclick="toggleNav()" style="display: none">
+            <i class="fas fa-times"></i>
           </div>
         </div>
       </div>
+    </div>
       <div class="container_sesion">
         <main class="main-content_sesion">
           <p>
-            <a href="/edulab/Modulos/Modulo2/segundoModulo.html">INICIO / </a
+            <a href="../../Modulo2/segundoModulo.html">INICIO / </a
             >SESIÓN 02: RELACIONES
           </p>
           <iframe id="pdfViewer" src="" width="100%" height="100%"></iframe>
