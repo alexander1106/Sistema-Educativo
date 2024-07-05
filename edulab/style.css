@@ -166,6 +166,7 @@ ul > li {
 .nav-desktop .sub-menu {
 	top: 100%;
 	left: 0;
+	background-color:#04041D;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -1612,7 +1613,6 @@ RESPONSIVE STYLESHEET
 	height: 100%; 
 	overflow: auto; 
 	background-color: rgb(0,0,0); 
-	background-color: rgba(0,0,0,0.4); 
 	padding-top: 60px; 
 }
 .modal-content {
@@ -1880,8 +1880,8 @@ RESPONSIVE STYLESHEET
 		margin-top: 10px;
 	}
 	.primer_group_text{
-		width: 110%;
-		margin-left: -10% !important;		
+		width: 130%;
+		margin-left: -20% !important;		
 		height: 18vh !important;
 	}
 	.primer_group_text h1{
@@ -2051,23 +2051,36 @@ RESPONSIVE STYLESHEET
 	}	
  }
 
-@media screen and (max-width: 667px) {
-	.container {
-		max-width: 300px;
+@media screen and (max-width: 687px) {
+	.primer_group{
+		width: 70%;
+		margin-top: 20px;
+		display: block;
 	}
-	#bar{
-		margin-top: 12px !important;
+
+	.primer_group_text{
+		width: 100%;
+		margin-left: -10% !important;		
+		height: 18vh !important;
 	}
-	#close{
-		margin-top: 10px;
+	.primer_group_text h1{
+		margin-top: -10px;
+		font-size: 2.4pc !important;
+		width: 100%;
+		margin-left: -10px;
+		text-align: center;
 	}
-	.top-header-right .social-list li {
-		margin-right: 40px;
+	.visualizar{
+		width: 100% !important;
+		margin-left:-60px !important;
 	}
-	#btn-eva{
-		padding: 10px;
-		width: 88%;
-		margin-left:-70px;		
+	.curso1 h2{
+		width: 80%;
+		font-size:20px;
+	}
+
+	.btn-eva{
+		width: 50% !important;
 	}
 
 	.top-header-right .social-list li:nth-last-child(n+3){
@@ -2253,7 +2266,7 @@ RESPONSIVE STYLESHEET
 		width: 90%;
 	}
 	.sesion{
-		width: 70% !important;
+		width: 80% !important;
 	}
 	.sesion .title{
 		margin:-10px;
@@ -2316,16 +2329,13 @@ RESPONSIVE STYLESHEET
 		box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.5);
 	  }
 	  .btn-eva{
-		font-size: 12px;
-		padding-top:13px !important;
+		font-size: 15px;
+		padding-top:20px !important;
 		font-family: Arial, Helvetica, sans-serif;
-		width: 200px !important ;
-		margin-left: 50px !important;
+		width: 59% !important ;
+		margin-left: 20% !important;
 	  }
-	  .visualizar {
-		width: 70%;
-		margin-right: 40px;
-	  }
+
 	 .schedule-container{
 		padding: 20px;
 		border-radius: 1px;

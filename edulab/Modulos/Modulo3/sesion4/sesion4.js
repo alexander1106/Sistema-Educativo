@@ -1,3 +1,4 @@
+
 function toggleNav() {
     var bar = document.getElementById("bar");
     var close = document.getElementById("close");
