@@ -1201,22 +1201,23 @@ aside .news-letter hr {
 }
 
 .btn-eva {
-		padding: 10px 20px;
-		font-size: 16px;
+		padding: 15px 25px;
+		font-size: 15px;
 		text-align: center;
-		background-color: #183c63;
+		background-color: #3d79b9;
 		border: none;
+		font-family: Arial, Helvetica, sans-serif;
 		border-radius: 5px;
 		text-decoration: none;
 		float:right;
-		margin-right: 10px;
+		margin-right: 80px;
 		font-weight: bold;
 		color: white !important ;
 
 }
 	.btn-eva:hover{
 		color:white;
-		background-color: #007BFF;
+		background-color: #0e2946;
 
 		transform: scale(1.03);
 	}
@@ -1542,8 +1543,9 @@ RESPONSIVE STYLESHEET
 	width: 100%;
 	border: 1px solid black;
 	box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.5);
-	background-color: #4aa39a;
+	background-color: #1a406b;
   }
+
   .visualizar {
 	width: 70%;
 	margin-right: 40px;
@@ -1893,6 +1895,7 @@ RESPONSIVE STYLESHEET
 		width: 80vw;
 		margin-left: -50px;
 	}
+
 	.contenedor1 img{
 		position: relative;
 		width: 100vw;
@@ -2150,7 +2153,52 @@ RESPONSIVE STYLESHEET
 		margin-top:-200px;
 		text-align: center;
 	}
+	.primer_group{
+		width: 80%;
+	}
+	.contenedor1{
+		width: 100%;
+		overflow: hidden;
 
+	}
+	.visualizar{
+		width: 100%;
+		margin-left: -20px;
+	
+	}
+	.visualizar h1{
+		font-size: 20px;
+		font-family: 'Times New Roman', Times, serif;
+	}
+	.curso1{
+		margin: auto;
+		margin-left: -20%;
+		margin-bottom: -50px !important;
+	}
+	.curso1 h2{
+		font-size: 18px;
+		width: 90%;
+	}
+	.sesion{
+		width: 70% !important;
+	}
+	.sesion .title{
+		margin:-10px;
+		font-size:17px ;
+		font-family: Arial, Helvetica, sans-serif;
+		
+	}
+	
+
+	.temario{
+		width: 60%;
+		margin-left: -20px;
+		font-size:18px ;
+	}
+	.primer_group h1{
+		font-size: 30px !important;
+
+	}
 	.mean-container .mean-nav {
 		box-sizing: border-box;
 		width: 50%;
@@ -2185,6 +2233,26 @@ RESPONSIVE STYLESHEET
 		margin-top: 50px;
 		text-align: right;
 	}
+	.sesion {
+		margin: 10px;
+		padding: 30px;
+		border-radius: 10px;
+		margin-bottom: 30px;
+		width: 100%;
+		border: 1px solid black;
+		box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.5);
+	  }
+	  .btn-eva{
+		font-size: 12px;
+		padding-top:13px !important;
+		font-family: Arial, Helvetica, sans-serif;
+		width: 200px !important ;
+		margin-left: 50px !important;
+	  }
+	  .visualizar {
+		width: 70%;
+		margin-right: 40px;
+	  }
 	 .schedule-container{
 		padding: 20px;
 		border-radius: 1px;
