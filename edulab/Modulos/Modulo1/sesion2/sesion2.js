@@ -13,6 +13,9 @@ function toggleNav() {
       navDesktop.style.display = "block";
     }
   }
+  function salir() {
+    window.location.href = "../../../../index.html";
+  }
 document.addEventListener('DOMContentLoaded', function() {
     const pdfViewer = document.getElementById('pdfViewer');
     const pdfUrl = 'Sesion 2.pdf';  // Ruta al archivo PDF
